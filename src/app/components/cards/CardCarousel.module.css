@@ -1,0 +1,65 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 76%;
+  height: 100%;
+  gap: 10px;
+}
+
+.title {
+  max-width: 250px;
+  text-align: center;
+  font-size: 21px;
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 12%;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease-out;
+  z-index: 2;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: rgba(209, 209, 209, 0.05);
+}
+
+.buttonForward {
+  right: 0;
+}
+
+.buttonBack {
+  left: 0;
+}
+
+.buttonIcon {
+  color: var(--white);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
