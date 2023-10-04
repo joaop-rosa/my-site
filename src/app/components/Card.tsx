@@ -6,6 +6,7 @@ import Image from "next/image";
 export const CARD_TYPE = {
   CAROUSEL: "CAROUSEL",
   TEXT: "TEXT",
+  CUSTOM: "CUSTOM",
 };
 
 export const CARD_THEME = {
@@ -21,8 +22,9 @@ export function Card(props: {
   theme?: any;
   icon?: any;
   itens?: any;
+  children?: any;
 }) {
-  const { title, description, type, theme, icon, itens } = props;
+  const { title, description, type, theme, icon, itens, children } = props;
 
   function renderContent() {
     if (type === CARD_TYPE.TEXT) {
@@ -56,11 +58,16 @@ export function Card(props: {
     return null;
   }
 
+  if (type === CARD_TYPE.CUSTOM) {
+    return children;
+  }
+
   return (
     <div
       className={cn(s.card, {
         [s.cardLight]: theme === CARD_THEME.LIGHT,
         [s.cardDark]: theme === CARD_THEME.DARK,
+        [s.cardCarousel]: type === CARD_TYPE.CAROUSEL,
       })}
     >
       <div className={s.titleWrapper}>

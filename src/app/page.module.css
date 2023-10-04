@@ -15,6 +15,47 @@
 .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 325px);
+  grid-template-rows: repeat(2, minmax(auto, 50%));
   gap: 25px;
+  max-height: 90vh;
+}
+
+.customCardsWrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.personalImageWrapper {
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.personalImage {
+  object-fit: cover;
+}
+
+.socialMediasWrapper {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 35px 35px;
+  grid-template-rows: 35px;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socialMedia {
+  background-color: black;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+}
+
+.iconWrapper {
+  position: relative;
+  height: 100%;
 }

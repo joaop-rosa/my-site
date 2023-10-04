@@ -46,7 +46,6 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
 
   function handleForward() {
     if (indexCarousel + 1 === itens.length) {
-      console.log("aqui");
       return setIndexCarousel([0, 1]);
     }
     setIndexCarousel([indexCarousel + 1, 1]);
@@ -57,6 +56,23 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
       return setIndexCarousel([itens.length - 1, -1]);
     }
     setIndexCarousel([indexCarousel - 1, -1]);
+  }
+
+  function handleDot(index: number) {}
+
+  function renderDots() {
+    return (
+      <div className={s.dotsWrapper}>
+        {itens.map((item, index) => {
+          return (
+            <button
+              className={cn(s.dot, { [s.dotChecked]: index === indexCarousel })}
+              onClick={() => handleDot(index)}
+            />
+          );
+        })}
+      </div>
+    );
   }
 
   return (
@@ -75,19 +91,21 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
           exit="exit"
           transition={{ duration: 0.7 }}
         >
-          <Image
-            src={itens[indexCarousel].icon}
-            alt={itens[indexCarousel].alt}
-            className={s.icon}
-            width={itens[indexCarousel].width}
-            height={itens[indexCarousel].height}
-            priority
-          />
+          <div className={s.iconWrapper}>
+            <Image
+              src={itens[indexCarousel].icon}
+              alt={itens[indexCarousel].alt}
+              className={s.icon}
+              fill
+              priority
+            />
+          </div>
+
           <h4 className={s.title}>{itens[indexCarousel].name}</h4>
           <div className={s.links}>
             <a href={itens[indexCarousel].repoUrl} target="_blank">
               <Image
-                src="/github.svg"
+                src="/icons/github.svg"
                 alt="/github.svg"
                 className={s.link}
                 width={25}
@@ -97,7 +115,7 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
             </a>
             <a href={itens[indexCarousel].prodUrl} target="_blank">
               <Image
-                src="/visit.svg"
+                src="/icons/visit.svg"
                 alt="/visit.svg"
                 className={s.link}
                 width={30}
@@ -109,13 +127,15 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
         </motion.div>
       </AnimatePresence>
 
+      {renderDots()}
+
       <button
         disabled={disabledButton}
         className={cn(s.button, s.buttonBack)}
         onClick={handleBack}
       >
         <Image
-          src="/arrow-left.svg"
+          src="/icons/arrow-left.svg"
           alt="Flecha para esquerda."
           width={50}
           className={s.buttonIcon}
@@ -129,7 +149,7 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
         onClick={handleForward}
       >
         <Image
-          src="/arrow-right.svg"
+          src="/icons/arrow-right.svg"
           alt="Flecha para direira."
           width={50}
           className={s.buttonIcon}

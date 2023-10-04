@@ -18,12 +18,20 @@
   width: 76%;
   height: 100%;
   gap: 10px;
+  padding-bottom: 35px;
 }
 
 .title {
   max-width: 250px;
   text-align: center;
   font-size: 21px;
+}
+
+.iconWrapper {
+  position: relative;
+  align-self: stretch;
+  flex: 1;
+  height: auto;
 }
 
 .button {
@@ -62,4 +70,15 @@
   align-items: center;
   justify-content: center;
   gap: 7px;
+}
+
+.dotsWrapper {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
