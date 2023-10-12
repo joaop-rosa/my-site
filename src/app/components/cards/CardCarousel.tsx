@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import s from "./CardCarousel.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import cn from "classnames";
 
@@ -58,15 +58,23 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
     setIndexCarousel([indexCarousel - 1, -1]);
   }
 
-  function handleDot(index: number) {}
+  function handleDot(index: number) {
+    setIndexCarousel((currentValue) => [
+      index,
+      index > currentValue[0] ? 1 : -1,
+    ]);
+  }
 
   function renderDots() {
     return (
       <div className={s.dotsWrapper}>
-        {itens.map((item, index) => {
+        {itens.map((_, index) => {
           return (
             <button
-              className={cn(s.dot, { [s.dotChecked]: index === indexCarousel })}
+              key={index}
+              className={cn(s.dot, {
+                [s.dotNotChecked]: index !== indexCarousel,
+              })}
               onClick={() => handleDot(index)}
             />
           );
@@ -75,12 +83,18 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
     );
   }
 
+  useEffect(() => {
+    const carouselInterval = setInterval(handleForward, 10000);
+    return () => clearInterval(carouselInterval);
+  }, []);
+
   return (
     <div className={s.carousel}>
       <AnimatePresence initial={false} custom={direction}>
         {/* TO DO - Adicionar drag para troca de item */}
-        {/* TO DO - Adicionar dots ao carousel */}
-        {/* TO DO - Adicionar timer para passagem */}
+        {/* TO DO - Animar timer para passagem */}
+        {/* TO DO - Limitar tamanho máximo icone da linguagem */}
+        {/* TO DO - bug on speed switch */}
         <motion.div
           className={s.item}
           key={itens[indexCarousel].name}

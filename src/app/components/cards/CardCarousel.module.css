@@ -73,7 +73,6 @@
 }
 
 .dotsWrapper {
-  background-color: aqua;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -81,4 +80,18 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--white);
+}
+
+.dotNotChecked {
+  background-color: rgba(255, 255, 255, 0.5);
 }

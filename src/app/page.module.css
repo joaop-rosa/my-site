@@ -15,25 +15,63 @@
 .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, minmax(auto, 50%));
+  grid-template-rows: repeat(2, minmax(auto, 48%));
   gap: 25px;
   max-height: 90vh;
 }
 
-.customCardsWrapper {
+.customStartCardWrapper {
+  padding: 60px 25px 20px;
+}
+
+.name {
+  color: var(--alto);
+  font-size: 58px;
+}
+
+.description {
+  color: var(--alto);
+  font-size: 38px;
+}
+
+.customCardPersonalWrapper {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 0.8fr 1fr;
   grid-template-rows: 1fr;
+  gap: 25px;
 }
 
 .personalImageWrapper {
-  border-radius: 25px;
+  border-radius: 40px;
   position: relative;
   overflow: hidden;
 }
 
+.personalImageWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+
 .personalImage {
   object-fit: cover;
+}
+
+.personalImageWrapper:hover::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.personalImageWrapper:hover .socialMediasWrapper {
+  grid-template-columns: 50px 50px;
+  grid-template-rows: 50px;
+}
+
+.personalImageWrapper:hover .socialMedia {
+  padding: 9px;
 }
 
 .socialMediasWrapper {
@@ -46,6 +84,8 @@
   right: 0;
   justify-content: center;
   gap: 10px;
+  z-index: 2;
+  transition: all 0.5s ease;
 }
 
 .socialMedia {
@@ -58,4 +98,38 @@
 .iconWrapper {
   position: relative;
   height: 100%;
+}
+
+.workCardWrapper {
+  padding: 20px 25px 35px;
+  border-radius: 40px;
+  background-color: var(--alto);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.worksWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+  flex: 1;
+  padding-right: 10px;
+}
+
+.work {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.workIconWrapper {
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+
+.workTextWrapper {
+  flex: 1;
 }
