@@ -14,14 +14,26 @@
 
 .content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(2, minmax(auto, 48%));
   gap: 25px;
   max-height: 90vh;
 }
 
+.cardAbout {
+  grid-column: span 5;
+  grid-row: auto;
+}
+
+.cardCarousel {
+  grid-column: span 9;
+  grid-row: auto;
+}
+
 .customStartCardWrapper {
   padding: 60px 25px 20px;
+  grid-column: span 7;
+  grid-row: auto;
 }
 
 .name {
@@ -35,16 +47,15 @@
 }
 
 .customCardPersonalWrapper {
-  display: grid;
-  grid-template-columns: 0.8fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 25px;
+  grid-row: auto;
+  grid-column: span 4;
 }
 
 .personalImageWrapper {
   border-radius: 40px;
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 .personalImageWrapper::after {
@@ -101,6 +112,8 @@
 }
 
 .workCardWrapper {
+  grid-column: span 7;
+  grid-row: auto;
   padding: 20px 25px 35px;
   border-radius: 40px;
   background-color: var(--alto);
@@ -113,7 +126,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  overflow-y: scroll;
+  overflow-y: auto;
   flex: 1;
   padding-right: 10px;
 }
@@ -125,11 +138,31 @@
 }
 
 .workIconWrapper {
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.workIconContainer {
   position: relative;
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
 }
 
 .workTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
   flex: 1;
+}
+
+.workTitle {
+  font-size: 20px;
+}
+
+.workSubtitle {
+  font-size: 18px;
+}
+
+.workTime {
+  font-size: 18px;
 }

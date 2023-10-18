@@ -7,7 +7,7 @@ import { PROJECTS } from "./constants/projects";
 import Image from "next/image";
 import { SOCIAL_MEDIAS } from "./constants/socialMedias";
 import { useEffect, useState } from "react";
-import Spinner from "./components/cards/Spinner";
+import Spinner from "./components/Spinner";
 import ReactDOM from "react-dom";
 import { WORKS } from "./constants/works";
 
@@ -37,13 +37,7 @@ export default function Home() {
             description={ABOUT_ME_CARD.DESCRIPTION}
             type={CARD_TYPE.TEXT}
             theme={CARD_THEME.LIGHT}
-          />
-          <Card
-            title={PROJECT_CARD.TITLE}
-            type={CARD_TYPE.CAROUSEL}
-            theme={CARD_THEME.DARK}
-            itens={PROJECTS}
-            icon="/icons/project.svg"
+            className={s.cardAbout}
           />
           <Card type={CARD_TYPE.CUSTOM}>
             <div className={s.customCardPersonalWrapper}>
@@ -77,14 +71,28 @@ export default function Home() {
                   })}
                 </div>
               </div>
-              {/* TO DO - Card muito pequeno para o conteudo */}
-              <div className={s.workCardWrapper}>
-                <h2>Exp. Profissionais</h2>
-                <div className={s.worksWrapper}>
-                  {WORKS.map((work) => {
-                    return (
-                      <div className={s.work}>
-                        <div className={s.workIconWrapper}>
+            </div>
+          </Card>
+          <Card
+            title={PROJECT_CARD.TITLE}
+            type={CARD_TYPE.CAROUSEL}
+            theme={CARD_THEME.DARK}
+            itens={PROJECTS}
+            icon="/icons/project.svg"
+            className={s.cardCarousel}
+          />
+          <Card type={CARD_TYPE.CUSTOM}>
+            <div className={s.workCardWrapper}>
+              <h2>Exp. Profissionais</h2>
+              <div className={s.worksWrapper}>
+                {WORKS.map((work) => {
+                  return (
+                    <div className={s.work}>
+                      <div
+                        className={s.workIconWrapper}
+                        style={{ backgroundColor: work.iconBackground }}
+                      >
+                        <div className={s.workIconContainer}>
                           <Image
                             src={work.companyIcon}
                             alt="Icone da empresa"
@@ -93,17 +101,17 @@ export default function Home() {
                             priority
                           />
                         </div>
-                        <div className={s.workTextWrapper}>
-                          <h4>{work.company}</h4>
-                          <p>{work.role}</p>
-                          <p>
-                            {work.yearStart} - {work.yearEnd ?? "Atualmente"}
-                          </p>
-                        </div>
                       </div>
-                    );
-                  })}
-                </div>
+                      <div className={s.workTextWrapper}>
+                        <h4 className={s.workTitle}>{work.company}</h4>
+                        <p className={s.workSubtitle}>{work.role}</p>
+                        <p className={s.workTime}>
+                          {work.yearStart} - {work.yearEnd ?? "Atualmente"}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </Card>

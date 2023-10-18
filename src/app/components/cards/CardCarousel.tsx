@@ -16,6 +16,9 @@ export type ProjectItem = {
   height: number;
 };
 
+const CAROUSEL_TIMER_MS = 10000;
+const CAROUSEL_TIMER_SECOND = 10;
+
 const variants = {
   enter: (direction: number) => {
     return {
@@ -37,7 +40,26 @@ const variants = {
   },
 };
 
+const draw = {
+  hidden: { pathLength: 0, opacity: 0 },
+  visible: () => {
+    return {
+      pathLength: 1,
+      opacity: 1,
+      transition: {
+        pathLength: {
+          type: "linear",
+          duration: CAROUSEL_TIMER_SECOND,
+          bounce: 0,
+        },
+        opacity: { duration: 0.01 },
+      },
+    };
+  },
+};
+
 export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
+  const [carouselInterval, setCaroulselInterval] = useState<NodeJS.Timeout>();
   const [[indexCarousel, direction], setIndexCarousel] = useState(
     itens.length ? [0, 0] : [0, -1]
   );
@@ -59,6 +81,7 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
   }
 
   function handleDot(index: number) {
+    resetInterval();
     setIndexCarousel((currentValue) => [
       index,
       index > currentValue[0] ? 1 : -1,
@@ -70,21 +93,48 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
       <div className={s.dotsWrapper}>
         {itens.map((_, index) => {
           return (
-            <button
-              key={index}
-              className={cn(s.dot, {
-                [s.dotNotChecked]: index !== indexCarousel,
-              })}
-              onClick={() => handleDot(index)}
-            />
+            <div className={s.dotWrapper}>
+              <motion.svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill={"transparent"}
+              >
+                <motion.circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="#d4d4d4"
+                  strokeWidth={3}
+                  variants={draw}
+                  initial="hidden"
+                  animate={index === indexCarousel ? "visible" : "hidden"}
+                />
+              </motion.svg>
+              <button
+                key={index}
+                className={cn(s.dot, {
+                  [s.dotNotChecked]: index !== indexCarousel,
+                })}
+                onClick={() => handleDot(index)}
+              />
+            </div>
           );
         })}
       </div>
     );
   }
 
+  // Not working
+  function resetInterval() {
+    if (carouselInterval) {
+      clearInterval(carouselInterval);
+    }
+    setCaroulselInterval(setInterval(handleForward, CAROUSEL_TIMER_MS));
+  }
+
   useEffect(() => {
-    const carouselInterval = setInterval(handleForward, 10000);
+    resetInterval();
     return () => clearInterval(carouselInterval);
   }, []);
 
@@ -105,15 +155,14 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
           exit="exit"
           transition={{ duration: 0.7 }}
         >
-          <div className={s.iconWrapper}>
-            <Image
-              src={itens[indexCarousel].icon}
-              alt={itens[indexCarousel].alt}
-              className={s.icon}
-              fill
-              priority
-            />
-          </div>
+          <Image
+            src={itens[indexCarousel].icon}
+            alt={itens[indexCarousel].alt}
+            className={s.icon}
+            width={100}
+            height={100}
+            priority
+          />
 
           <h4 className={s.title}>{itens[indexCarousel].name}</h4>
           <div className={s.links}>

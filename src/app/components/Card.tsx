@@ -23,8 +23,10 @@ export function Card(props: {
   icon?: any;
   itens?: any;
   children?: any;
+  className?: any;
 }) {
-  const { title, description, type, theme, icon, itens, children } = props;
+  const { title, description, type, theme, icon, itens, children, className } =
+    props;
 
   function renderContent() {
     if (type === CARD_TYPE.TEXT) {
@@ -64,7 +66,7 @@ export function Card(props: {
 
   return (
     <div
-      className={cn(s.card, {
+      className={cn(s.card, className, {
         [s.cardLight]: theme === CARD_THEME.LIGHT,
         [s.cardDark]: theme === CARD_THEME.DARK,
         [s.cardCarousel]: type === CARD_TYPE.CAROUSEL,
