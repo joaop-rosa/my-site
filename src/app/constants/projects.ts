@@ -10,11 +10,10 @@ export const PROJECTS = [
   },
   {
     name: "Site de Jéssica Birck",
-    repoUrl: "https://github.com/joaop-rosa/jessica-site",
     prodUrl: "https://jessicabirck.cojuri.com.br/",
     icon: "/icons/next.svg",
     alt: "Ícone next.",
     width: 90,
     height: 90,
   },
-];
+]

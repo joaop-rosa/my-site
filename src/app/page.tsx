@@ -1,25 +1,24 @@
-"use client";
+"use client"
 
-import s from "./page.module.css";
-import { CARD_THEME, CARD_TYPE, Card } from "./components/Card";
-import { ABOUT_ME_CARD, PROJECT_CARD } from "./constants/text";
-import { PROJECTS } from "./constants/projects";
-import Image from "next/image";
-import { SOCIAL_MEDIAS } from "./constants/socialMedias";
-import { useEffect, useState } from "react";
-import Spinner from "./components/Spinner";
-import ReactDOM from "react-dom";
-import { WORKS } from "./constants/works";
+import s from "./page.module.css"
+import { CARD_THEME, CARD_TYPE, Card } from "./components/Card"
+import { ABOUT_ME_CARD, PROJECT_CARD } from "./constants/text"
+import { PROJECTS } from "./constants/projects"
+import Image from "next/image"
+import { SOCIAL_MEDIAS } from "./constants/socialMedias"
+import { useEffect, useState } from "react"
+import Spinner from "./components/Spinner"
+import { WORKS } from "./constants/works"
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setIsLoading(false);
-  }, []);
+    setIsLoading(false)
+  }, [])
 
   if (isLoading) {
-    return <Spinner />;
+    return <Spinner />
   }
 
   return (
@@ -67,7 +66,7 @@ export default function Home() {
                           />
                         </div>
                       </a>
-                    );
+                    )
                   })}
                 </div>
               </div>
@@ -85,9 +84,9 @@ export default function Home() {
             <div className={s.workCardWrapper}>
               <h2>Exp. Profissionais</h2>
               <div className={s.worksWrapper}>
-                {WORKS.map((work) => {
+                {WORKS.map((work, index) => {
                   return (
-                    <div className={s.work}>
+                    <div className={s.work} key={index}>
                       <div
                         className={s.workIconWrapper}
                         style={{ backgroundColor: work.iconBackground }}
@@ -110,7 +109,7 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-                  );
+                  )
                 })}
               </div>
             </div>
@@ -118,5 +117,5 @@ export default function Home() {
         </div>
       </div>
     </main>
-  );
+  )
 }
