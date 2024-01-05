@@ -169,3 +169,118 @@
 .workTime {
   font-size: 18px;
 }
+
+@media screen and (max-width: 1024px) {
+  .content {
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(3, 360px);
+    height: unset;
+    min-height: 700px;
+    max-height: unset;
+  }
+
+  .customStartCardWrapper {
+    grid-column: span 11;
+    grid-row: span 2;
+  }
+
+  .cardAbout {
+    grid-column: span 5;
+    grid-row: auto;
+  }
+
+  .cardCarousel {
+    grid-column: span 9;
+    grid-row: auto;
+  }
+
+  .workCardWrapper {
+    grid-column: span 7;
+    grid-row: auto;
+  }
+
+  .customCardPersonalWrapper {
+    grid-row: auto;
+    grid-column: span 5;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .customStartCardWrapper {
+    grid-column: span 10;
+    grid-row: span 2;
+  }
+
+  .cardAbout {
+    grid-column: span 6;
+    grid-row: auto;
+  }
+
+  .customCardPersonalWrapper {
+    grid-row: auto;
+    grid-column: span 6;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-rows: repeat(4, 360px);
+  }
+
+  .customStartCardWrapper {
+    grid-column: span 16;
+    grid-row: span 1;
+  }
+
+  .cardAbout {
+    grid-column: span 8;
+    grid-row: auto;
+  }
+
+  .cardCarousel {
+    grid-column: span 16;
+    grid-row: auto;
+  }
+
+  .workCardWrapper {
+    grid-column: span 16;
+    grid-row: auto;
+  }
+
+  .customCardPersonalWrapper {
+    grid-row: auto;
+    grid-column: span 8;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-rows: repeat(5, minmax(auto, 360px));
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .customStartCardWrapper {
+    grid-column: span 5;
+    grid-row: span 1;
+  }
+
+  .cardAbout {
+    grid-column: span 5;
+    grid-row: auto;
+  }
+
+  .cardCarousel {
+    grid-column: span 5;
+    grid-row: auto;
+  }
+
+  .workCardWrapper {
+    grid-column: span 5;
+    grid-row: auto;
+  }
+
+  .customCardPersonalWrapper {
+    grid-row: 1.2;
+    grid-column: span 5;
+  }
+}
