@@ -27,8 +27,9 @@ export default function Home() {
         <div className={s.content}>
           <Card type={CARD_TYPE.CUSTOM}>
             <div className={s.cardName}>
+              <h3 className={s.presentation}>Bem vindo!</h3>
               <h1 className={s.name}>João Paulo</h1>
-              <h2 className={s.description}>Front-End Developer</h2>
+              <h2 className={s.description}>Front-end Developer</h2>
             </div>
           </Card>
           <Card

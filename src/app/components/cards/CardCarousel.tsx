@@ -90,8 +90,8 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
                       src="/icons/github.svg"
                       alt="/github.svg"
                       className={s.link}
-                      width={25}
-                      height={25}
+                      width={30}
+                      height={30}
                       priority
                     />
                   </a>
@@ -102,8 +102,8 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
                     src="/icons/visit.svg"
                     alt="/visit.svg"
                     className={s.link}
-                    width={30}
-                    height={30}
+                    width={40}
+                    height={40}
                     priority
                   />
                 </a>

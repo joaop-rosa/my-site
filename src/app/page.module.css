@@ -34,19 +34,31 @@
 }
 
 .cardName {
-  padding: 60px 25px 20px;
+  padding: 20px 25px 80px 30px;
   grid-column: span 7;
   grid-row: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid 2px white;
+  border-radius: 40px;
+  color: var(--alto);
+}
+
+.presentation {
+  font-size: 32px;
+  font-weight: 500;
 }
 
 .name {
-  color: var(--alto);
-  font-size: 56px;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 20px;
 }
 
 .description {
-  color: var(--alto);
-  font-size: 34px;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .customCardPersonalWrapper {
@@ -150,8 +162,8 @@
 
 .workIconContainer {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
 }
 
 .workTextWrapper {
@@ -180,17 +192,18 @@
     height: unset;
     min-height: 700px;
     max-height: unset;
+    padding-bottom: 40px;
   }
 
   .cardName {
-    grid-column: span 11;
+    grid-column: span 10;
     grid-row: auto;
     order: 1;
     min-height: 275px;
   }
 
   .cardAbout {
-    grid-column: span 5;
+    grid-column: span 6;
     grid-row: auto;
     order: 2;
     min-height: 270px;
@@ -241,33 +254,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  .content {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
   .cardName {
-    grid-column: span 5;
+    padding-bottom: 60px;
   }
 
-  .cardAbout {
-    grid-column: span 3;
-  }
-
-  .cardCarousel {
-    grid-column: span 5;
-    order: 4;
-  }
-
-  .workCardWrapper {
-    grid-column: span 5;
-  }
-
-  .customCardPersonalWrapper {
-    grid-column: span 2;
-  }
-}
-
-@media screen and (max-width: 768px) {
   .content {
     grid-template-columns: repeat(7, 1fr);
   }
@@ -283,6 +273,7 @@
 
   .cardCarousel {
     grid-column: span 7;
+    order: 4;
   }
 
   .workCardWrapper {
@@ -294,9 +285,18 @@
     grid-column: span 3;
     order: 1;
   }
+
+  .socialMediasWrapper {
+    grid-template-columns: 45px 45px;
+    grid-template-rows: 45px;
+  }
 }
 
 @media screen and (max-width: 535px) {
+  .cardName {
+    padding-left: 20px;
+  }
+
   .cardName {
     grid-column: span 7;
   }
@@ -317,12 +317,8 @@
     grid-column: span 7;
   }
 
-  .name {
-    font-size: 46px;
-  }
-
   .description {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .personalImage {

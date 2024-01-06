@@ -9,7 +9,7 @@ export const PROJECTS = [
     height: 95,
   },
   {
-    name: "Site de Jéssica Birck",
+    name: "Site jurídico",
     prodUrl: "https://jessicabirck.cojuri.com.br/",
     icon: "/icons/next.svg",
     alt: "Ícone next.",
