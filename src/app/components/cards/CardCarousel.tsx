@@ -97,16 +97,18 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
                   </a>
                 ) : null}
 
-                <a href={item.prodUrl} target="_blank">
-                  <Image
-                    src="/icons/visit.svg"
-                    alt="/visit.svg"
-                    className={s.link}
-                    width={40}
-                    height={40}
-                    priority
-                  />
-                </a>
+                {item.prodUrl ? (
+                  <a href={item.prodUrl} target="_blank">
+                    <Image
+                      src="/icons/visit.svg"
+                      alt="/visit.svg"
+                      className={s.link}
+                      width={40}
+                      height={40}
+                      priority
+                    />
+                  </a>
+                ) : null}
               </div>
             </div>
           )

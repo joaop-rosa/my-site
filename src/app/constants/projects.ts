@@ -16,4 +16,12 @@ export const PROJECTS = [
     width: 90,
     height: 90,
   },
+  {
+    name: "Este site :)",
+    repoUrl: "https://github.com/joaop-rosa/my-site",
+    icon: "/icons/next.svg",
+    alt: "Ícone next.",
+    width: 90,
+    height: 90,
+  },
 ]
