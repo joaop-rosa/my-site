@@ -33,7 +33,7 @@
   grid-row: auto;
 }
 
-.customStartCardWrapper {
+.cardName {
   padding: 60px 25px 20px;
   grid-column: span 7;
   grid-row: auto;
@@ -41,12 +41,12 @@
 
 .name {
   color: var(--alto);
-  font-size: 58px;
+  font-size: 56px;
 }
 
 .description {
   color: var(--alto);
-  font-size: 38px;
+  font-size: 34px;
 }
 
 .customCardPersonalWrapper {
@@ -126,11 +126,14 @@
 }
 
 .worksWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 90px));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 360px));
+  align-items: flex-start;
+  flex: unset;
+  row-gap: 20px;
+  column-gap: 30px;
   overflow-y: auto;
-  flex: 1;
   padding-right: 10px;
 }
 
@@ -173,114 +176,164 @@
 @media screen and (max-width: 1024px) {
   .content {
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(3, 360px);
+    grid-template-rows: repeat(auto-fit, 1fr);
     height: unset;
     min-height: 700px;
     max-height: unset;
   }
 
-  .customStartCardWrapper {
+  .cardName {
     grid-column: span 11;
-    grid-row: span 2;
+    grid-row: auto;
+    order: 1;
+    min-height: 275px;
   }
 
   .cardAbout {
     grid-column: span 5;
     grid-row: auto;
+    order: 2;
+    min-height: 270px;
   }
 
   .cardCarousel {
-    grid-column: span 9;
+    grid-column: span 11;
     grid-row: auto;
+    order: 3;
+    min-height: 320px;
   }
 
   .workCardWrapper {
-    grid-column: span 7;
+    grid-column: span 16;
     grid-row: auto;
+    order: 5;
+    min-height: 250px;
+  }
+
+  .worksWrapper {
+    padding-right: 0;
   }
 
   .customCardPersonalWrapper {
     grid-row: auto;
     grid-column: span 5;
+    order: 4;
+    min-height: 360px;
   }
 }
 
 @media screen and (max-width: 920px) {
-  .customStartCardWrapper {
+  .cardName {
     grid-column: span 10;
-    grid-row: span 2;
   }
 
   .cardAbout {
     grid-column: span 6;
-    grid-row: auto;
-  }
-
-  .customCardPersonalWrapper {
-    grid-row: auto;
-    grid-column: span 6;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .content {
-    grid-template-rows: repeat(4, 360px);
-  }
-
-  .customStartCardWrapper {
-    grid-column: span 16;
-    grid-row: span 1;
-  }
-
-  .cardAbout {
-    grid-column: span 8;
-    grid-row: auto;
   }
 
   .cardCarousel {
-    grid-column: span 16;
-    grid-row: auto;
-  }
-
-  .workCardWrapper {
-    grid-column: span 16;
-    grid-row: auto;
+    grid-column: span 10;
   }
 
   .customCardPersonalWrapper {
-    grid-row: auto;
-    grid-column: span 8;
+    grid-column: span 6;
   }
 }
 
 @media screen and (max-width: 768px) {
   .content {
-    grid-template-rows: repeat(5, minmax(auto, 360px));
     grid-template-columns: repeat(5, 1fr);
   }
 
-  .customStartCardWrapper {
+  .cardName {
     grid-column: span 5;
-    grid-row: span 1;
   }
 
   .cardAbout {
-    grid-column: span 5;
-    grid-row: auto;
+    grid-column: span 3;
   }
 
   .cardCarousel {
     grid-column: span 5;
-    grid-row: auto;
+    order: 4;
   }
 
   .workCardWrapper {
     grid-column: span 5;
-    grid-row: auto;
   }
 
   .customCardPersonalWrapper {
-    grid-row: 1.2;
-    grid-column: span 5;
+    grid-column: span 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .cardName {
+    grid-column: span 7;
+  }
+
+  .cardAbout {
+    grid-column: span 4;
+    order: 2;
+  }
+
+  .cardCarousel {
+    grid-column: span 7;
+  }
+
+  .workCardWrapper {
+    grid-column: span 7;
+    min-height: 280px;
+  }
+
+  .customCardPersonalWrapper {
+    grid-column: span 3;
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .cardName {
+    grid-column: span 7;
+  }
+
+  .cardAbout {
+    grid-column: span 7;
+  }
+
+  .cardCarousel {
+    grid-column: span 7;
+  }
+
+  .workCardWrapper {
+    grid-column: span 7;
+  }
+
+  .customCardPersonalWrapper {
+    grid-column: span 7;
+  }
+
+  .name {
+    font-size: 46px;
+  }
+
+  .description {
+    font-size: 32px;
+  }
+
+  .personalImage {
+    object-position: 50% 15%;
+  }
+
+  .workTitle {
+    font-size: 18px;
+  }
+
+  .workSubtitle {
+    font-size: 16px;
   }
 }

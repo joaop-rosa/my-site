@@ -1,32 +1,32 @@
-import cn from "classnames";
-import s from "./Card.module.css";
-import { CardCarousel } from "./cards/CardCarousel";
-import Image from "next/image";
+import cn from "classnames"
+import s from "./Card.module.css"
+import { CardCarousel } from "./CardCarousel"
+import Image from "next/image"
 
 export const CARD_TYPE = {
   CAROUSEL: "CAROUSEL",
   TEXT: "TEXT",
   CUSTOM: "CUSTOM",
-};
+}
 
 export const CARD_THEME = {
   DARK: "DARK",
   LIGHT: "LIGHT",
-};
+}
 
 //Remover optionals
 export function Card(props: {
-  title?: any;
-  description?: any;
-  type?: any;
-  theme?: any;
-  icon?: any;
-  itens?: any;
-  children?: any;
-  className?: any;
+  title?: any
+  description?: any
+  type?: any
+  theme?: any
+  icon?: any
+  itens?: any
+  children?: any
+  className?: any
 }) {
   const { title, description, type, theme, icon, itens, children, className } =
-    props;
+    props
 
   function renderContent() {
     if (type === CARD_TYPE.TEXT) {
@@ -34,11 +34,11 @@ export function Card(props: {
         <>
           <p className={s.description}>{description}</p>
         </>
-      );
+      )
     }
 
     if (type === CARD_TYPE.CAROUSEL) {
-      return <CardCarousel itens={itens} />;
+      return <CardCarousel itens={itens} />
     }
   }
 
@@ -54,14 +54,14 @@ export function Card(props: {
           height={25}
           priority
         />
-      );
+      )
     }
 
-    return null;
+    return null
   }
 
   if (type === CARD_TYPE.CUSTOM) {
-    return children;
+    return children
   }
 
   return (
@@ -79,5 +79,5 @@ export function Card(props: {
 
       {renderContent()}
     </div>
-  );
+  )
 }

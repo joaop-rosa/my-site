@@ -47,3 +47,21 @@
   justify-content: center;
   gap: 7px;
 }
+
+@media screen and (max-width: 535px) {
+  .icon {
+    width: 80px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .arrowLeft {
+    left: -50px;
+  }
+
+  .arrowRight {
+    right: -50px;
+  }
+}

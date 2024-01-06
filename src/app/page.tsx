@@ -1,7 +1,7 @@
 "use client"
 
 import s from "./page.module.css"
-import { CARD_THEME, CARD_TYPE, Card } from "./components/Card"
+import { CARD_THEME, CARD_TYPE, Card } from "./components/cards/Card"
 import { ABOUT_ME_CARD, PROJECT_CARD } from "./constants/text"
 import { PROJECTS } from "./constants/projects"
 import Image from "next/image"
@@ -26,7 +26,7 @@ export default function Home() {
       <div className={s.container}>
         <div className={s.content}>
           <Card type={CARD_TYPE.CUSTOM}>
-            <div className={s.customStartCardWrapper}>
+            <div className={s.cardName}>
               <h1 className={s.name}>João Paulo</h1>
               <h2 className={s.description}>Front-End Developer</h2>
             </div>
