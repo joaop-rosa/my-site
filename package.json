@@ -1,29 +1,30 @@
 {
-  "name": "my-site",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@types/react-slick": "^0.23.13",
-    "classnames": "^2.3.2",
-    "framer-motion": "^10.16.4",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
-  },
-  "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest",
-    "typescript": "latest"
-  }
+	"name": "my-site",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"lint": "biome lint .",
+		"format": "biome check --write ."
+	},
+	"dependencies": {
+		"classnames": "2.5.1",
+		"framer-motion": "12.40.0",
+		"react": "18.3.1",
+		"react-dom": "18.3.1",
+		"react-slick": "0.29.0",
+		"slick-carousel": "1.8.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.15",
+		"@types/node": "20.19.41",
+		"@types/react": "18.3.29",
+		"@types/react-slick": "0.23.13",
+		"@types/react-dom": "18.3.7",
+		"@vitejs/plugin-react": "4.7.0",
+		"typescript": "5.9.3",
+		"vite": "6.4.2"
+	}
 }
