@@ -1,0 +1,37 @@
+.card {
+	border-radius: 40px;
+	padding: 20px 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 15px;
+}
+
+.cardLight {
+	background-color: var(--white);
+}
+
+.cardDark {
+	background-color: var(--mine-shaft);
+	color: var(--white);
+}
+
+.cardCarousel {
+}
+
+.cardProject {
+	background-color: var(--white);
+}
+
+.description {
+	flex: 1;
+	overflow-y: auto;
+	padding-right: 15px;
+	font-size: 18px;
+}
+
+.titleWrapper {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}

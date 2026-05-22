@@ -1,1 +1,0 @@
-- Tentar melhor card com nome
