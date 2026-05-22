@@ -1,69 +1,128 @@
 .main {
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
 }
 
 .container {
-	width: 1100px;
+	width: 100%;
+	max-width: 1200px;
 	margin: auto;
-	padding: 25px;
+	padding: 24px;
 }
 
+/* ==========================================
+   MOBILE FIRST BASE (Single Column)
+   ========================================== */
 .content {
 	display: grid;
-	grid-template-columns: repeat(16, 1fr);
-	grid-template-rows: repeat(2, minmax(auto, 48%));
-	gap: 25px;
+	grid-template-columns: 1fr;
+	gap: 24px;
 	width: 100%;
-	height: 90vh;
-	min-height: 700px;
-	max-height: 750px;
+}
+
+/* Force grid items to be able to shrink below their content size on mobile */
+.content > * {
+	min-width: 0;
+}
+
+.rightColumn {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	min-width: 0;
 }
 
 .cardAbout {
-	grid-column: span 5;
-	grid-row: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.05) !important;
+	backdrop-filter: blur(12px) !important;
+	-webkit-backdrop-filter: blur(12px) !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	border-radius: 24px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	height: 80px;
+	min-height: 80px;
+	flex-shrink: 0;
 }
 
-.cardCarousel {
-	grid-column: span 9;
-	grid-row: auto;
+.cardAbout:hover {
+	background: rgba(214, 119, 17, 0.1) !important;
+	border-color: rgba(214, 119, 17, 0.5) !important;
+	box-shadow: 0 0 20px rgba(214, 119, 17, 0.2);
+}
+
+.aboutCompactContent {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.aboutCompactContent h2 {
+	font-size: 24px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.aboutCompactIcon {
+	width: 24px;
+	height: 24px;
+	transition: transform 0.3s ease;
+}
+
+.cardAbout:hover .aboutCompactIcon {
+	transform: translateX(5px);
 }
 
 .cardName {
-	padding: 20px 25px 80px 30px;
-	grid-column: span 7;
-	grid-row: auto;
+	padding: 32px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	border: solid 2px white;
+	border: 1px solid rgba(255, 255, 255, 0.1);
 	border-radius: 40px;
 	color: var(--alto);
+	height: 100%;
+	background: radial-gradient(circle at top left, rgba(214, 119, 17, 0.15) 0%, transparent 60%), rgba(255, 255, 255, 0.09);
+	transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.cardName:hover {
+	box-shadow: 0 0 30px rgba(214, 119, 17, 0.15);
+	border-color: rgba(214, 119, 17, 0.4);
 }
 
 .presentation {
-	font-size: 32px;
-	font-weight: 500;
+	font-size: 16px;
+	font-weight: 600;
+	color: #a1a1aa;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 }
 
 .name {
 	font-size: 40px;
 	font-weight: 700;
-	margin-top: 20px;
+	margin-top: 8px;
+	color: #ffffff;
 }
 
 .description {
-	font-size: 28px;
-	font-weight: 600;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 1.4;
+	margin-top: 8px;
+	color: #D67711;
 }
 
 .customCardPersonalWrapper {
-	grid-row: auto;
-	grid-column: span 4;
+	height: 100%;
+	min-height: 350px; /* Essential for mobile when it stacks */
 }
 
 .personalImageWrapper {
@@ -71,6 +130,8 @@
 	position: relative;
 	overflow: hidden;
 	height: 100%;
+	width: 100%;
+	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .personalImageWrapper::after {
@@ -100,16 +161,20 @@
 	padding: 9px;
 }
 
+.personalImageWrapper:hover .socialMedia img {
+	filter: var(--amber-filter);
+}
+
 .socialMediasWrapper {
 	position: absolute;
 	display: grid;
-	grid-template-columns: 35px 35px;
-	grid-template-rows: 35px;
+	grid-template-columns: 45px 45px;
+	grid-template-rows: 45px;
 	bottom: 10%;
 	left: 0;
 	right: 0;
 	justify-content: center;
-	gap: 10px;
+	gap: 16px;
 	z-index: 2;
 	transition: all 0.5s ease;
 }
@@ -119,6 +184,11 @@
 	border-radius: 50px;
 	position: relative;
 	padding: 5px;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.socialMedia:hover {
+	transform: scale(1.1);
 }
 
 .iconWrapper {
@@ -126,24 +196,53 @@
 	height: 100%;
 }
 
+
+
 .workCardWrapper {
-	grid-column: span 7;
-	grid-row: auto;
-	padding: 20px 25px 35px;
+	padding: 32px;
 	border-radius: 40px;
-	background-color: var(--alto);
+	background-color: rgba(255, 255, 255, 0.09);
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	gap: 24px;
+	height: 100%;
+	min-height: 350px;
+	color: var(--white);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.workCardWrapper:hover {
+	box-shadow: 0 0 30px rgba(214, 119, 17, 0.15);
+	border-color: rgba(214, 119, 17, 0.4);
+}
+
+.workCardWrapper h2 {
+	font-weight: 600;
+	color: #a1a1aa;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.cardCarousel {
+	background: linear-gradient(165deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.00) 100%) !important;
+	backdrop-filter: blur(24px) saturate(180%) !important;
+	-webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+	border: 1px solid rgba(255, 255, 255, 0.06) !important;
+	transition: box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.cardCarousel:hover {
+	box-shadow: 0 0 40px rgba(214, 119, 17, 0.15);
+	border-color: rgba(214, 119, 17, 0.3);
 }
 
 .worksWrapper {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(auto, 360px));
+	display: flex;
+	flex-direction: column;
 	align-items: flex-start;
-	flex: unset;
-	row-gap: 20px;
-	column-gap: 30px;
+	gap: 24px;
 	overflow-y: auto;
 	padding-right: 10px;
 }
@@ -151,184 +250,103 @@
 .work {
 	display: flex;
 	align-items: center;
-	gap: 15px;
+	gap: 16px;
 }
 
 .workIconWrapper {
-	padding: 5px;
+	padding: 6px;
 	border-radius: 50px;
 }
 
 .workIconContainer {
 	position: relative;
-	width: 45px;
-	height: 45px;
+	width: 48px;
+	height: 48px;
 }
 
 .workTextWrapper {
 	display: flex;
 	flex-direction: column;
-	gap: 2px;
+	gap: 4px;
 	flex: 1;
 }
 
 .workTitle {
 	font-size: 20px;
+	line-height: 1.2;
+	font-weight: 700;
+	color: #ffffff;
 }
 
 .workSubtitle {
-	font-size: 18px;
+	font-size: 16px;
+	line-height: 1.3;
+	color: #a1a1aa;
 }
 
 .workTime {
-	font-size: 18px;
+	font-size: 16px;
+	color: #71717a;
 }
 
-@media screen and (max-width: 1024px) {
+/* ==========================================
+   TABLET (2 Columns)
+   ========================================== */
+@media screen and (min-width: 768px) {
 	.content {
-		grid-template-columns: repeat(16, 1fr);
-		grid-template-rows: repeat(auto-fit, 1fr);
-		height: unset;
-		min-height: 700px;
-		max-height: unset;
-		padding-bottom: 40px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto auto auto;
+		gap: 24px;
 	}
 
-	.cardName {
-		grid-column: span 10;
-		grid-row: auto;
-		order: 1;
-		min-height: 275px;
-	}
-
-	.cardAbout {
-		grid-column: span 6;
-		grid-row: auto;
-		order: 2;
-		min-height: 270px;
-	}
-
-	.cardCarousel {
-		grid-column: span 11;
-		grid-row: auto;
-		order: 3;
-		min-height: 320px;
-	}
-
-	.workCardWrapper {
-		grid-column: span 16;
-		grid-row: auto;
-		order: 5;
-		min-height: 250px;
-	}
-
-	.worksWrapper {
-		padding-right: 0;
-	}
-
-	.customCardPersonalWrapper {
-		grid-row: auto;
-		grid-column: span 5;
-		order: 4;
-		min-height: 360px;
-	}
+	.cardName { grid-column: 1 / 3; grid-row: 1; }
+	.rightColumn { grid-column: 1 / 2; grid-row: 2; gap: 24px; }
+	.workCardWrapper { grid-column: 2 / 3; grid-row: 2; min-height: unset; }
+	.cardCarousel { grid-column: 1 / 3; grid-row: 3; }
 }
 
-@media screen and (max-width: 920px) {
-	.cardName {
-		grid-column: span 10;
-	}
-
-	.cardAbout {
-		grid-column: span 6;
-	}
-
-	.cardCarousel {
-		grid-column: span 10;
-	}
-
-	.customCardPersonalWrapper {
-		grid-column: span 6;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.cardName {
-		padding-bottom: 60px;
+/* ==========================================
+   DESKTOP (3 Columns)
+   ========================================== */
+@media screen and (min-width: 1024px) {
+	.container {
+		padding: 40px;
 	}
 
 	.content {
-		grid-template-columns: repeat(7, 1fr);
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr 1fr;
+		height: calc(100vh - 80px);
+		min-height: 650px;
+		max-height: 850px;
 	}
 
-	.cardName {
-		grid-column: span 7;
+	.cardName { 
+		grid-column: 1 / 2; 
+		grid-row: 1 / 2;
+		padding: 32px; 
+	}
+	.rightColumn {
+		grid-column: 3 / 4;
+		grid-row: 1 / 3;
+		gap: 24px;
+	}
+	.customCardPersonalWrapper { 
+		flex: 1;
+		height: auto;
+		min-height: 0;
+	}
+	.cardCarousel { 
+		grid-column: 1 / 3; 
+		grid-row: 2 / 3;
+	}
+	.workCardWrapper { 
+		grid-column: 2 / 3; 
+		grid-row: 1 / 2;
+		padding: 32px;
 	}
 
-	.cardAbout {
-		grid-column: span 4;
-		order: 2;
-	}
-
-	.cardCarousel {
-		grid-column: span 7;
-		order: 4;
-	}
-
-	.workCardWrapper {
-		grid-column: span 7;
-		min-height: 280px;
-	}
-
-	.customCardPersonalWrapper {
-		grid-column: span 3;
-		order: 1;
-	}
-
-	.socialMediasWrapper {
-		grid-template-columns: 45px 45px;
-		grid-template-rows: 45px;
-	}
-}
-
-@media screen and (max-width: 535px) {
-	.cardName {
-		padding-left: 20px;
-	}
-
-	.cardName {
-		grid-column: span 7;
-	}
-
-	.cardAbout {
-		grid-column: span 7;
-	}
-
-	.cardCarousel {
-		grid-column: span 7;
-	}
-
-	.workCardWrapper {
-		grid-column: span 7;
-	}
-
-	.customCardPersonalWrapper {
-		grid-column: span 7;
-	}
-
-	.description {
-		font-size: 24px;
-	}
-
-	.personalImage {
-		object-position: 50% 15%;
-	}
-
-	.workTitle {
-		font-size: 18px;
-	}
-
-	.workSubtitle {
-		font-size: 16px;
-	}
+	.presentation { font-size: 28px; }
+	.name { font-size: 36px; }
+	.description { font-size: 22px; }
 }

@@ -19,18 +19,19 @@
 	text-align: center;
 	font-size: 21px;
 	margin: 10px auto;
+	font-weight: 700;
 }
 
 .arrow {
 	width: 50px;
 	height: 100%;
-	color: var(--white);
 	z-index: 2;
+	transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .arrow:hover {
 	cursor: pointer;
-	color: var(--mine-shaft);
+	transform: scale(1.1);
 }
 
 .arrowLeft {
@@ -46,6 +47,14 @@
 	align-items: center;
 	justify-content: center;
 	gap: 12px;
+}
+
+.link {
+	transition: transform 0.3s ease;
+}
+
+.link:hover {
+	transform: scale(1.1);
 }
 
 @media screen and (max-width: 535px) {
