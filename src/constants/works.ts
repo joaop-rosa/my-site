@@ -2,7 +2,7 @@ export const WORKS = [
 	{
 		company: "CWI Software",
 		companyIcon: "/icons/cwi.svg",
-		role: "Desenvolvedor Front-end",
+		role: "Desenvolvedor Front\u2011end",
 		yearStart: 2024,
 		yearEnd: null,
 		iconBackground: "var(--black)",
@@ -10,7 +10,7 @@ export const WORKS = [
 	{
 		company: "CWI Software",
 		companyIcon: "/icons/cwi.svg",
-		role: "Estágio Desenvolvedor FrontEnd",
+		role: "Estágio Desenvolvedor Front\u2011end",
 		yearStart: 2022,
 		yearEnd: 2024,
 		iconBackground: "var(--black)",

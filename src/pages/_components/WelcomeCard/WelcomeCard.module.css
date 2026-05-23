@@ -1,0 +1,81 @@
+.cardName {
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 40px;
+	color: var(--alto);
+	height: 100%;
+	background: radial-gradient(circle at top left, rgba(214, 119, 17, 0.15) 0%, transparent 60%), rgba(255, 255, 255, 0.09);
+	transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.cardName:hover {
+	box-shadow: 0 0 30px rgba(214, 119, 17, 0.15);
+	border-color: rgba(214, 119, 17, 0.4);
+}
+
+.presentation {
+	font-size: 16px;
+	font-weight: 600;
+	color: #a1a1aa;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.name {
+	font-size: 40px;
+	font-weight: 700;
+	margin-top: 8px;
+	color: #ffffff;
+}
+
+.description {
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 1.4;
+	margin-top: 8px;
+	color: #D67711;
+}
+
+.socialMediasWrapper {
+	display: flex;
+	gap: 16px;
+	margin-top: 24px;
+}
+
+.socialMedia {
+	background-color: black;
+	border-radius: 50px;
+	position: relative;
+	padding: 10px;
+	width: 45px;
+	height: 45px;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.socialMedia:hover {
+	transform: scale(1.1);
+}
+
+.socialMedia:hover img {
+	filter: var(--amber-filter);
+}
+
+.iconWrapper {
+	position: relative;
+	height: 100%;
+}
+
+@media screen and (min-width: 1180px) {
+	.presentation { font-size: 28px; }
+	.name { font-size: 36px; }
+	.description { font-size: 22px; }
+}
+
+@media screen and (min-width: 768px) {
+	.cardName {
+		padding: 32px;
+	}
+}
