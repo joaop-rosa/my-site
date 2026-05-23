@@ -1,11 +1,11 @@
-import s from "./App.module.css"
-import { Card } from "./components/cards/Card"
-import { CARD_THEME, CARD_TYPE } from "./components/cards/constants"
-import { PROJECTS } from "./constants/projects"
-import { SOCIAL_MEDIAS } from "./constants/socialMedias"
+import s from "@/App.module.css"
+import { Card } from "@/components/cards/Card"
+import { CARD_THEME, CARD_TYPE } from "@/components/cards/constants"
+import { PROJECTS } from "@/constants/projects"
+import { SOCIAL_MEDIAS } from "@/constants/socialMedias"
 import cn from "classnames"
-import { PROJECT_CARD } from "./constants/text"
-import { WORKS } from "./constants/works"
+import { PROJECT_CARD } from "@/constants/text"
+import { WORKS } from "@/constants/works"
 
 export default function Home() {
   return (
