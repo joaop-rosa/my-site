@@ -4,8 +4,9 @@
 	--mine-shaft: #333333;
 	--alto: #d4d4d4;
 	--black: #000;
-	--amber-hex: #D67711;
-	--amber-filter: brightness(0) saturate(100%) invert(54%) sepia(49%) saturate(1915%) hue-rotate(351deg) brightness(87%) contrast(89%);
+	--amber-hex: #d67711;
+	--amber-filter: brightness(0) saturate(100%) invert(54%) sepia(49%)
+		saturate(1915%) hue-rotate(351deg) brightness(87%) contrast(89%);
 }
 
 * {
@@ -40,4 +41,14 @@ a {
 
 ::-webkit-scrollbar-track-piece {
 	background-color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 }

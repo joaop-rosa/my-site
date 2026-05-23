@@ -65,7 +65,9 @@
 .aboutOverlayIcon {
 	width: 24px;
 	height: 24px;
-	transition: transform 0.3s ease, filter 0.3s ease;
+	transition:
+		transform 0.3s ease,
+		filter 0.3s ease;
 }
 
 .personalImageWrapper:hover .aboutOverlayContent h2 {
@@ -78,7 +80,7 @@
 }
 
 @media screen and (min-width: 1180px) {
-	.customCardPersonalWrapper { 
+	.customCardPersonalWrapper {
 		flex: 1.6;
 		height: auto;
 		min-height: 0;

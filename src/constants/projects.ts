@@ -13,7 +13,8 @@ export const PROJECTS = [
 	// },
 	{
 		name: "Site jurídico",
-		description: "Landing page institucional para escritório de advocacia com foco em conversão.",
+		description:
+			"Landing page institucional para escritório de advocacia com foco em conversão.",
 		image: "/images/jessicaSite.png",
 		techs: ["Next.js"],
 		prodUrl: "https://jessicabirck.adv.br/",
@@ -24,8 +25,9 @@ export const PROJECTS = [
 	},
 	{
 		name: "Este site :)",
-		description: "Meu portfólio pessoal construído com design Bento Box e foco em UX/UI.",
-		image: "/images/jessicaSite.png",
+		description:
+			"Meu portfólio pessoal construído com design Bento Box e foco em UX/UI.",
+		image: "/images/esteSite.png",
 		techs: ["React", "CSS Modules", "Vite"],
 		repoUrl: "https://github.com/joaop-rosa/my-site",
 		icon: "/icons/next.svg",

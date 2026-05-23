@@ -1,6 +1,6 @@
+import { Routes } from "@generouted/react-router";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Routes } from "@generouted/react-router";
 import "./globals.css";
 import "./App.module.css";
 

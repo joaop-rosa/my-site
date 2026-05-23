@@ -1,0 +1,14 @@
+export const TECH_STACK = [
+	"React",
+	"Next.js",
+	"TypeScript",
+	"Tailwind CSS",
+	"Python",
+	"Framer Motion",
+	"Node.js",
+	"PHP",
+	"HTML",
+	"CSS",
+	"JavaScript",
+	"Wordpress",
+];

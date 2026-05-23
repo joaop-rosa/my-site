@@ -7,8 +7,16 @@
 	border-radius: 40px;
 	color: var(--alto);
 	height: 100%;
-	background: radial-gradient(circle at top left, rgba(214, 119, 17, 0.15) 0%, transparent 60%), rgba(255, 255, 255, 0.09);
-	transition: box-shadow 0.3s ease, border-color 0.3s ease;
+	background:
+		radial-gradient(
+			circle at top left,
+			rgba(214, 119, 17, 0.15) 0%,
+			transparent 60%
+		),
+		rgba(255, 255, 255, 0.09);
+	transition:
+		box-shadow 0.3s ease,
+		border-color 0.3s ease;
 }
 
 .cardName:hover {
@@ -36,7 +44,7 @@
 	font-weight: 500;
 	line-height: 1.4;
 	margin-top: 8px;
-	color: #D67711;
+	color: #d67711;
 }
 
 .socialMediasWrapper {
@@ -52,7 +60,9 @@
 	padding: 10px;
 	width: 45px;
 	height: 45px;
-	transition: background-color 0.3s ease, transform 0.3s ease;
+	transition:
+		background-color 0.3s ease,
+		transform 0.3s ease;
 }
 
 .socialMedia:hover {
@@ -69,9 +79,15 @@
 }
 
 @media screen and (min-width: 1180px) {
-	.presentation { font-size: 28px; }
-	.name { font-size: 36px; }
-	.description { font-size: 22px; }
+	.presentation {
+		font-size: 28px;
+	}
+	.name {
+		font-size: 36px;
+	}
+	.description {
+		font-size: 22px;
+	}
 }
 
 @media screen and (min-width: 768px) {

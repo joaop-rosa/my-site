@@ -35,11 +35,18 @@
 }
 
 .cardCarousel {
-	background: linear-gradient(165deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.00) 100%) !important;
+	background: linear-gradient(
+		165deg,
+		rgba(255, 255, 255, 0.1) 0%,
+		rgba(255, 255, 255, 0) 100%
+	) !important;
 	backdrop-filter: blur(24px) saturate(180%) !important;
 	-webkit-backdrop-filter: blur(24px) saturate(180%) !important;
 	border: 1px solid rgba(255, 255, 255, 0.06) !important;
-	transition: box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+	transition:
+		box-shadow 0.3s ease,
+		border-color 0.3s ease,
+		background 0.3s ease;
 }
 
 .cardCarousel:hover {
@@ -57,21 +64,31 @@
 		gap: 24px;
 	}
 
-	.welcomeGridArea { grid-column: 1 / 3; grid-row: 1; }
-	.rightColumn { 
-		grid-column: 1 / 3; 
-		grid-row: 2; 
+	.welcomeGridArea {
+		grid-column: 1 / 3;
+		grid-row: 1;
+	}
+	.rightColumn {
+		grid-column: 1 / 3;
+		grid-row: 2;
 		flex-direction: row;
 	}
 	.rightColumn > * {
 		flex: 1;
 	}
-	.workGridArea { grid-column: 1 / 3; grid-row: 3; min-height: unset; }
-	.cardCarousel { grid-column: 1 / 3; grid-row: 4; }
+	.workGridArea {
+		grid-column: 1 / 3;
+		grid-row: 3;
+		min-height: unset;
+	}
+	.cardCarousel {
+		grid-column: 1 / 3;
+		grid-row: 4;
+	}
 }
 
 /* ==========================================
-   DESKTOP (3 Columns)
+   DESKTOP (2 Columns)
    ========================================== */
 @media screen and (min-width: 1180px) {
 	.container {
@@ -79,27 +96,30 @@
 	}
 
 	.content {
-		grid-template-columns: 1.1fr 1.1fr 1.3fr;
+		grid-template-columns: 2fr 1.2fr;
 		grid-template-rows: 1fr 1.1fr; /* Top row shorter than bottom row */
 		max-height: 850px;
 	}
 
-	.welcomeGridArea { 
-		grid-column: 1 / 2; 
+	.welcomeGridArea {
+		grid-column: 1 / 2;
 		grid-row: 1 / 2;
 	}
+	.cardCarousel {
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
+	}
 	.rightColumn {
-		grid-column: 3 / 4;
+		grid-column: 2 / 3;
 		grid-row: 1 / 3;
 		gap: 24px;
 		flex-direction: column;
 	}
-	.cardCarousel { 
-		grid-column: 1 / 3; 
-		grid-row: 2 / 3;
+	.photoArea {
+		flex: 1;
+		min-height: 0;
 	}
-	.workGridArea { 
-		grid-column: 2 / 3; 
-		grid-row: 1 / 2;
+	.photoArea > * {
+		height: 100%;
 	}
 }

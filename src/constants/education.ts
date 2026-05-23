@@ -7,6 +7,20 @@ export const EDUCATION = [
 		iconBackground: "var(--mine-shaft)",
 	},
 	{
+		title: "CWI Crescer - Level 2",
+		subtitle: "CWI Software",
+		year: "2022",
+		icon: "/icons/cwi.svg",
+		iconBackground: "var(--mine-shaft)",
+	},
+	{
+		title: "CWI Crescer - Level 1",
+		subtitle: "CWI Software",
+		year: "2022",
+		icon: "/icons/cwi.svg",
+		iconBackground: "var(--mine-shaft)",
+	},
+	{
 		title: "Técnico em Informática",
 		subtitle: "Cimol",
 		year: "2015 - 2018",
