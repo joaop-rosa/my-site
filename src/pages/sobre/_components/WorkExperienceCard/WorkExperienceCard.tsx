@@ -1,6 +1,6 @@
 import cn from "classnames";
-import { useEffect, useState } from "react";
 import { WORKS } from "@/constants/works";
+import { useDelayedScroll } from "@/hooks/useDelayedScroll";
 import s from "./WorkExperienceCard.module.css";
 
 interface WorkExperienceCardProps {
@@ -10,19 +10,7 @@ interface WorkExperienceCardProps {
 export function WorkExperienceCard({
 	isHovered = false,
 }: WorkExperienceCardProps) {
-	const [showScroll, setShowScroll] = useState(false);
-
-	useEffect(() => {
-		let timeoutId: ReturnType<typeof setTimeout>;
-		if (isHovered) {
-			timeoutId = setTimeout(() => {
-				setShowScroll(true);
-			}, 500); // Aguarda a animação do CSS (0.5s) terminar
-		} else {
-			setShowScroll(false);
-		}
-		return () => clearTimeout(timeoutId);
-	}, [isHovered]);
+	const showScroll = useDelayedScroll(isHovered);
 
 	return (
 		<div className={s.workCardWrapper}>

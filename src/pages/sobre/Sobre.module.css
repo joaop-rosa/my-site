@@ -58,6 +58,10 @@
 	.content {
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	.bioArea {
+		height: 700px;
+	}
 }
 
 @media screen and (min-width: 1180px) {
@@ -84,7 +88,9 @@
 	}
 
 	.bioArea {
-		flex: 0 0 auto;
+		flex: 2.2;
+		height: auto;
+		min-height: 0;
 	}
 	.techArea {
 		flex: 1;
@@ -103,7 +109,7 @@
 
 	.workArea.expanded,
 	.educationArea.expanded {
-		flex: 1.3;
+		flex: 1.1;
 	}
 
 	.workArea.collapsed,

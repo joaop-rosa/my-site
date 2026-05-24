@@ -6,25 +6,43 @@ export function BioCard() {
 			<h2 className={s.title}>Sobre Mim</h2>
 			<div className={s.content}>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur.
+					Sou desenvolvedor front-end formado em Sistemas para Internet pela{" "}
+					<span className={s.highlight}>FACCAT</span>. Ao longo da minha
+					trajetória, especializei-me na construção de aplicações web eficientes
+					e escaláveis, tendo o <span className={s.highlight}>React</span> como
+					minha principal tecnologia de atuação. Além do ecossistema JavaScript,
+					possuo experiência prática no desenvolvimento e manutenção de
+					plataformas utilizando <span className={s.highlight}>PHP</span> e{" "}
+					<span className={s.highlight}>WordPress</span>, o que me proporciona
+					versatilidade para me adaptar a diferentes requisitos técnicos e
+					necessidades de arquitetura.
 				</p>
 				<p>
-					Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-					officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
-					omnis iste natus error sit voluptatem accusantium doloremque
-					laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-					veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+					Nos últimos quatro anos, atuo na{" "}
+					<span className={s.highlight}>CWI Software</span>, alocado de forma
+					contínua em projetos para a{" "}
+					<span className={s.highlight}>Coca-Cola</span>. Durante esse período,
+					fui responsável por desenvolver uma ampla variedade de sistemas de
+					alta visibilidade e impacto. Meu histórico inclui a entrega de
+					soluções tecnológicas para grandes eventos, como{" "}
+					<span className={s.highlight}>Rock in Rio</span> e{" "}
+					<span className={s.highlight}>The Town</span>, além da criação de
+					sites institucionais, da plataforma de gestão das{" "}
+					<span className={s.highlight}>Caravanas de Natal</span> e de sistemas
+					corporativos estratégicos utilizados pelas operações da Coca-Cola
+					LATAM.
 				</p>
 				<p>
-					Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-					fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-					sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-					sit amet, consectetur, adipisci velit.
+					Minha principal motivação profissional é traduzir regras de negócios
+					complexas em interfaces{" "}
+					<span className={s.highlight}>
+						funcionais, acessíveis e de alto desempenho
+					</span>
+					. Busco o aprimoramento contínuo através do estudo de novas
+					tecnologias e da aplicação das melhores práticas de engenharia de
+					software. Meu objetivo é sempre entregar soluções robustas que gerem{" "}
+					<span className={s.highlight}>valor real</span> para o cliente e
+					garantam a melhor experiência possível para o usuário final.
 				</p>
 			</div>
 		</div>

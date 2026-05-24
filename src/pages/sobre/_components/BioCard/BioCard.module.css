@@ -31,4 +31,13 @@
 	line-height: 1.6;
 	font-size: 16px;
 	color: var(--zinc-regular);
+	overflow-y: auto;
+	flex: 1;
+	min-height: 0;
+	padding-right: 8px;
+}
+
+.highlight {
+	color: var(--white);
+	font-weight: 600;
 }
