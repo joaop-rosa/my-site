@@ -1,26 +1,28 @@
-import { useState, useRef } from "react";
+import { useRef, useState } from "react";
 import { SOCIAL_MEDIAS } from "@/constants/socialMedias";
 import s from "./WelcomeCard.module.css";
 
 export function WelcomeCard() {
-	const [gokuState, setGokuState] = useState<'idle' | 'flying' | 'leaving'>('idle');
+	const [gokuState, setGokuState] = useState<"idle" | "flying" | "leaving">(
+		"idle",
+	);
 	const gifRef = useRef<HTMLImageElement>(null);
 
 	const handleMouseEnter = () => {
-		setGokuState('flying');
+		setGokuState("flying");
 	};
 
 	const handleMouseLeave = () => {
-		if (gokuState === 'flying') {
+		if (gokuState === "flying") {
 			if (gifRef.current) {
 				const style = window.getComputedStyle(gifRef.current);
-				gifRef.current.style.setProperty('--exit-start-left', style.left);
-				gifRef.current.style.setProperty('--exit-start-top', style.top);
+				gifRef.current.style.setProperty("--exit-start-left", style.left);
+				gifRef.current.style.setProperty("--exit-start-top", style.top);
 			}
-			setGokuState('leaving');
-			
+			setGokuState("leaving");
+
 			setTimeout(() => {
-				setGokuState('idle');
+				setGokuState("idle");
 			}, 800); // tempo da animação de saída
 		}
 	};
@@ -29,17 +31,18 @@ export function WelcomeCard() {
 		<div className={s.cardName}>
 			<h3 className={s.presentation}>
 				Oi, eu sou{" "}
-				<span 
+				{/** biome-ignore lint/a11y/noStaticElementInteractions: is necessary */}
+				<span
 					className={s.gokuContainer}
 					onMouseEnter={handleMouseEnter}
 					onMouseLeave={handleMouseLeave}
 				>
 					<span className={s.strikethrough}>Goku</span>
-					<img 
+					<img
 						ref={gifRef}
-						src="/images/goku.gif" 
-						alt="Goku voando" 
-						className={`${s.gokuGif} ${s[gokuState]}`} 
+						src="/images/goku.gif"
+						alt="Goku voando"
+						className={`${s.gokuGif} ${s[gokuState]}`}
 					/>
 				</span>
 			</h3>
