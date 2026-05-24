@@ -21,7 +21,7 @@ msgstr "← VOLTAR PARA HOME"
 msgid "Atualmente"
 msgstr "Atualmente"
 
-#: src/pages/sobre/_components/EducationCard/EducationCard.tsx:19
+#: src/pages/sobre/_components/EducationCard/EducationCard.tsx:18
 msgid "Certificados & Formações"
 msgstr "Certificados & Formações"
 
@@ -50,11 +50,11 @@ msgstr "Desenvolvedor Front‑end"
 msgid "Estágio Desenvolvedor Front‑end"
 msgstr "Estágio Desenvolvedor Front‑end"
 
-#: src/constants/projects.ts:25
+#: src/constants/projects.ts:24
 msgid "Este site :)"
 msgstr "Este site :)"
 
-#: src/pages/sobre/_components/WorkExperienceCard/WorkExperienceCard.tsx:21
+#: src/pages/sobre/_components/WorkExperienceCard/WorkExperienceCard.tsx:20
 msgid "Exp. Profissionais"
 msgstr "Exp. Profissionais"
 
@@ -62,15 +62,15 @@ msgstr "Exp. Profissionais"
 msgid "Faccat"
 msgstr "Faccat"
 
-#: src/pages/_components/PersonalPhotoCard/PersonalPhotoCard.tsx:15
+#: src/pages/_components/PersonalPhotoCard/PersonalPhotoCard.tsx:13
 msgid "Foto pessoal."
 msgstr "Foto pessoal."
 
-#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:55
+#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:53
 msgid "Front-end Developer"
 msgstr "Front-end Developer"
 
-#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:48
+#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:46
 msgid "Goku voando"
 msgstr "Goku voando"
 
@@ -83,35 +83,35 @@ msgid "Icone da empresa"
 msgstr "Icone da empresa"
 
 #. placeholder {0}: socialMedia.name
-#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:69
+#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:67
 msgid "Ícone do {0}"
 msgstr "Ícone do {0}"
 
-#: src/constants/projects.ts:19
+#: src/constants/projects.ts:18
 msgid "Landing page institucional para escritório de advocacia com foco em conversão."
 msgstr "Landing page institucional para escritório de advocacia com foco em conversão."
 
-#: src/constants/projects.ts:27
+#: src/constants/projects.ts:25
 msgid "Meu portfólio pessoal construído com design Bento Box e foco em UX/UI."
 msgstr "Meu portfólio pessoal construído com design Bento Box e foco em UX/UI."
 
-#: src/pages/sobre/_components/BioCard/BioCard.tsx:41
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:44
 msgid "Minha principal motivação profissional é traduzir regras de negócios complexas em interfaces <0>funcionais, acessíveis e de alto desempenho</0>. Busco o aprimoramento contínuo através do estudo de novas tecnologias e da aplicação das melhores práticas de engenharia de software. Meu objetivo é sempre entregar soluções robustas que gerem <1>valor real</1> para o cliente e garantam a melhor experiência possível para o usuário final."
 msgstr "Minha principal motivação profissional é traduzir regras de negócios complexas em interfaces <0>funcionais, acessíveis e de alto desempenho</0>. Busco o aprimoramento contínuo através do estudo de novas tecnologias e da aplicação das melhores práticas de engenharia de software. Meu objetivo é sempre entregar soluções robustas que gerem <1>valor real</1> para o cliente e garantam a melhor experiência possível para o usuário final."
 
-#: src/pages/sobre/_components/BioCard/BioCard.tsx:24
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:27
 msgid "Nos últimos quatro anos, atuo na <0>CWI Software</0>, alocado de forma contínua em projetos para a <1>Coca-Cola</1>. Durante esse período, fui responsável por desenvolver uma ampla variedade de sistemas de alta visibilidade e impacto. Meu histórico inclui a entrega de soluções tecnológicas para grandes eventos, como <2>Rock in Rio</2> e <3>The Town</3>, além da criação de sites institucionais, da plataforma de gestão das <4>Caravanas de Natal</4> e de sistemas corporativos estratégicos utilizados pelas operações da Coca-Cola LATAM."
 msgstr "Nos últimos quatro anos, atuo na <0>CWI Software</0>, alocado de forma contínua em projetos para a <1>Coca-Cola</1>. Durante esse período, fui responsável por desenvolver uma ampla variedade de sistemas de alta visibilidade e impacto. Meu histórico inclui a entrega de soluções tecnológicas para grandes eventos, como <2>Rock in Rio</2> e <3>The Town</3>, além da criação de sites institucionais, da plataforma de gestão das <4>Caravanas de Natal</4> e de sistemas corporativos estratégicos utilizados pelas operações da Coca-Cola LATAM."
 
-#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:37
+#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:35
 msgid "Oi, eu sou"
 msgstr "Oi, eu sou"
 
-#: src/constants/text.ts:6
+#: src/constants/text.ts:5
 msgid "Olá! Sou João Paulo, um entusiasta da tecnologia e atualmente um desenvolvedor front-end em constante evolução. Atualmente, estou aprimorando minhas habilidades e conhecimentos na área, enquanto curso Tecnólogo em Sistemas para Internet na FACCAT."
 msgstr "Olá! Sou João Paulo, um entusiasta da tecnologia e atualmente um desenvolvedor front-end em constante evolução. Atualmente, estou aprimorando minhas habilidades e conhecimentos na área, enquanto curso Tecnólogo em Sistemas para Internet na FACCAT."
 
-#: src/constants/text.ts:10
+#: src/constants/text.ts:9
 msgid "Projetos"
 msgstr "Projetos"
 
@@ -124,21 +124,25 @@ msgid "Site jurídico"
 msgstr "Site jurídico"
 
 #: src/constants/text.ts:4
-#: src/pages/_components/PersonalPhotoCard/PersonalPhotoCard.tsx:20
+#: src/pages/_components/PersonalPhotoCard/PersonalPhotoCard.tsx:19
 msgid "Sobre mim"
 msgstr "Sobre mim"
 
-#: src/pages/sobre/_components/BioCard/BioCard.tsx:7
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:8
 msgid "Sobre Mim"
 msgstr "Sobre Mim"
 
-#: src/pages/sobre/_components/BioCard/BioCard.tsx:10
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:12
 msgid "Sou desenvolvedor front-end formado em Sistemas para Internet pela <0>FACCAT</0>. Ao longo da minha trajetória, especializei-me na construção de aplicações web eficientes e escaláveis, tendo o <1>React</1> como minha principal tecnologia de atuação. Além do ecossistema JavaScript, possuo experiência prática no desenvolvimento e manutenção de plataformas utilizando <2>PHP</2> e <3>WordPress</3>, o que me proporciona versatilidade para me adaptar a diferentes requisitos técnicos e necessidades de arquitetura."
 msgstr "Sou desenvolvedor front-end formado em Sistemas para Internet pela <0>FACCAT</0>. Ao longo da minha trajetória, especializei-me na construção de aplicações web eficientes e escaláveis, tendo o <1>React</1> como minha principal tecnologia de atuação. Além do ecossistema JavaScript, possuo experiência prática no desenvolvimento e manutenção de plataformas utilizando <2>PHP</2> e <3>WordPress</3>, o que me proporciona versatilidade para me adaptar a diferentes requisitos técnicos e necessidades de arquitetura."
 
 #: src/constants/works.ts:23
 msgid "Suporte Técnico"
 msgstr "Suporte Técnico"
+
+#: src/pages/sobre/_components/TechStackCard/TechStackCard.tsx:9
+msgid "Tech Stack"
+msgstr "Tech Stack"
 
 #: src/constants/education.ts:26
 msgid "Técnico em Informática"
