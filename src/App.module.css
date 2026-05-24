@@ -35,11 +35,7 @@
 }
 
 div.cardCarousel {
-	background: linear-gradient(
-		165deg,
-		var(--white-10) 0%,
-		var(--white-00) 100%
-	);
+	background: linear-gradient(165deg, var(--white-10) 0%, var(--white-00) 100%);
 	backdrop-filter: blur(24px) saturate(180%);
 	-webkit-backdrop-filter: blur(24px) saturate(180%);
 	border: 1px solid var(--white-06);

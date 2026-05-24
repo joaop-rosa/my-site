@@ -32,7 +32,7 @@ export default function Sobre() {
 						</div>
 					</div>
 					<div className={s.rightColumn}>
-						{/** biome-ignore lint/a11y/noStaticElementInteractions: <explanation> */}
+						{/** biome-ignore lint/a11y/noStaticElementInteractions: interactive card element */}
 						<div
 							role="presentation"
 							onMouseEnter={() => setHoveredCard("work")}
@@ -41,7 +41,7 @@ export default function Sobre() {
 						>
 							<WorkExperienceCard isHovered={hoveredCard === "work"} />
 						</div>
-						{/** biome-ignore lint/a11y/noStaticElementInteractions: <explanation> */}
+						{/** biome-ignore lint/a11y/noStaticElementInteractions: interactive card element */}
 						<div
 							role="presentation"
 							onMouseEnter={() => setHoveredCard("education")}

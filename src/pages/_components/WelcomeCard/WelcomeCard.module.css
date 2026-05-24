@@ -8,11 +8,7 @@
 	color: var(--alto);
 	height: 100%;
 	background:
-		radial-gradient(
-			circle at top left,
-			var(--amber-15) 0%,
-			transparent 60%
-		),
+		radial-gradient(circle at top left, var(--amber-15) 0%, transparent 60%),
 		var(--white-09);
 	transition:
 		box-shadow 0.3s ease,

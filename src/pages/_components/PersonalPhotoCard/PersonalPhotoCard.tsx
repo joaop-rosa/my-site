@@ -3,10 +3,7 @@ import s from "./PersonalPhotoCard.module.css";
 
 export function PersonalPhotoCard() {
 	return (
-		<Link
-			to="/sobre"
-			className={s.customCardPersonalWrapper}
-		>
+		<Link to="/sobre" className={s.customCardPersonalWrapper}>
 			<div className={s.personalImageWrapper}>
 				<img
 					src="/images/personal-photo.jpeg"

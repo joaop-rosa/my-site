@@ -86,7 +86,6 @@
 	filter: var(--amber-filter);
 }
 
-
 @media screen and (min-width: 1180px) {
 	.customCardPersonalWrapper {
 		flex: 1.6;

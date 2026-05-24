@@ -5,10 +5,7 @@ export function WelcomeCard() {
 	return (
 		<div className={s.cardName}>
 			<h3 className={s.presentation}>
-				Oi, eu sou{" "}
-				<span className={s.strikethrough}>
-					Goku
-				</span>
+				Oi, eu sou <span className={s.strikethrough}>Goku</span>
 			</h3>
 			<h1 className={s.name}>João Paulo</h1>
 			<h2 className={s.description}>Front-end Developer</h2>

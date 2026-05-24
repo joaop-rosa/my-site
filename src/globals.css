@@ -28,7 +28,7 @@
 	--amber-30: rgba(214, 119, 17, 0.3);
 	--amber-40: rgba(214, 119, 17, 0.4);
 	--amber-50: rgba(214, 119, 17, 0.5);
-	
+
 	--shark-00: rgba(35, 35, 38, 0);
 }
 
@@ -75,4 +75,3 @@ h6 {
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 }
-

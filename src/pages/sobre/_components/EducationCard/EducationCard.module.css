@@ -1,11 +1,7 @@
 .educationCardWrapper {
 	padding: 24px;
 	border-radius: 40px;
-	background: linear-gradient(
-		165deg,
-		var(--white-10) 0%,
-		var(--white-00) 100%
-	);
+	background: linear-gradient(165deg, var(--white-10) 0%, var(--white-00) 100%);
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
@@ -129,11 +125,7 @@
 	left: 0;
 	right: 0;
 	height: 80px;
-	background: linear-gradient(
-		to top,
-		var(--shark) 0%,
-		var(--shark-00) 100%
-	);
+	background: linear-gradient(to top, var(--shark) 0%, var(--shark-00) 100%);
 	pointer-events: none;
 	opacity: 1;
 	transition: opacity 0.3s ease;

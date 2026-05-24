@@ -1,6 +1,6 @@
+import cn from "classnames";
 import { useEffect, useState } from "react";
 import { EDUCATION } from "@/constants/education";
-import cn from "classnames";
 import s from "./EducationCard.module.css";
 
 interface EducationCardProps {
@@ -39,11 +39,15 @@ export function EducationCard({ isHovered = false }: EducationCardProps) {
 					return (
 						<div className={s.innerCard} key={key}>
 							<div
-								className={cn(s.workIconWrapper, { [s.workIconWrapperJpg]: isJpg })}
+								className={cn(s.workIconWrapper, {
+									[s.workIconWrapperJpg]: isJpg,
+								})}
 								style={{ backgroundColor: item.iconBackground }}
 							>
 								<div
-									className={cn(s.workIconContainer, { [s.workIconContainerJpg]: isJpg })}
+									className={cn(s.workIconContainer, {
+										[s.workIconContainerJpg]: isJpg,
+									})}
 								>
 									<img
 										src={item.icon}

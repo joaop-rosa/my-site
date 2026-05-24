@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router";
 
 export default function App() {

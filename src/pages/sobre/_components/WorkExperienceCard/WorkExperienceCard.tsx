@@ -1,6 +1,6 @@
+import cn from "classnames";
 import { useEffect, useState } from "react";
 import { WORKS } from "@/constants/works";
-import cn from "classnames";
 import s from "./WorkExperienceCard.module.css";
 
 interface WorkExperienceCardProps {
@@ -41,11 +41,15 @@ export function WorkExperienceCard({
 					return (
 						<div className={s.work} key={key}>
 							<div
-								className={cn(s.workIconWrapper, { [s.workIconWrapperJpg]: isJpg })}
+								className={cn(s.workIconWrapper, {
+									[s.workIconWrapperJpg]: isJpg,
+								})}
 								style={{ backgroundColor: work.iconBackground }}
 							>
 								<div
-									className={cn(s.workIconContainer, { [s.workIconContainerJpg]: isJpg })}
+									className={cn(s.workIconContainer, {
+										[s.workIconContainerJpg]: isJpg,
+									})}
 								>
 									<img
 										src={work.companyIcon}
