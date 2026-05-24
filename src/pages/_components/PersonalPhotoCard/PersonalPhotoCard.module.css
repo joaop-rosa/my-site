@@ -1,0 +1,94 @@
+.customCardPersonalWrapper {
+	display: block;
+	height: 100%;
+	text-decoration: none;
+	min-height: 350px;
+}
+
+.personalImageWrapper {
+	border-radius: 40px;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	border: 1px solid var(--white-10);
+}
+
+.personalImageWrapper::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: transparent;
+	transition: background-color 0.5s ease;
+}
+
+.personalImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.personalImageWrapper:hover::after {
+	background-color: var(--black-50);
+}
+
+.photoOverlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 32px;
+	background: linear-gradient(to top, var(--black-90) 0%, transparent 100%);
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+	z-index: 2;
+	transition: padding-bottom 0.3s ease;
+}
+
+.personalImageWrapper:hover .photoOverlay {
+	padding-bottom: 40px;
+}
+
+.aboutOverlayContent {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	cursor: pointer;
+}
+
+.aboutOverlayContent h2 {
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--white);
+	transition: color 0.3s ease;
+}
+
+.aboutOverlayIcon {
+	width: 24px;
+	height: 24px;
+	transition:
+		transform 0.3s ease,
+		filter 0.3s ease;
+}
+
+.personalImageWrapper:hover .aboutOverlayContent h2 {
+	color: var(--amber-hex);
+}
+
+.personalImageWrapper:hover .aboutOverlayIcon {
+	transform: translateX(5px);
+	filter: var(--amber-filter);
+}
+
+@media screen and (min-width: 1180px) {
+	.customCardPersonalWrapper {
+		flex: 1.6;
+		min-height: 0;
+	}
+}

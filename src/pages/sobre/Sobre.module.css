@@ -1,0 +1,112 @@
+.main {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+}
+
+.backButton {
+	background: none;
+	border: none;
+	color: var(--amber-hex);
+	font-family: inherit;
+	font-size: 14px;
+	font-weight: 700;
+	cursor: pointer;
+	margin-bottom: 24px;
+	display: inline-flex;
+	align-items: center;
+	transition: opacity 0.2s ease;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	flex-shrink: 0;
+	width: fit-content;
+}
+
+.backButton:hover {
+	opacity: 0.8;
+}
+
+.content {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 24px;
+	width: 100%;
+}
+
+.content > * {
+	min-width: 0;
+}
+
+.leftColumn,
+.rightColumn {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+@media screen and (min-width: 768px) {
+	.content {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.bioArea {
+		height: 700px;
+	}
+}
+
+@media screen and (min-width: 1180px) {
+	.container {
+		padding: 40px;
+	}
+
+	.content {
+		grid-template-columns: 1.2fr 1fr;
+		height: 810px;
+	}
+
+	.leftColumn,
+	.rightColumn {
+		height: 100%;
+		min-height: 0;
+	}
+
+	.bioArea {
+		flex: 2.2;
+		height: auto;
+		min-height: 0;
+	}
+	.techArea {
+		flex: 1;
+		min-height: 0;
+	}
+	.workArea {
+		flex: 1;
+		min-height: 0;
+		transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+	}
+	.educationArea {
+		flex: 1;
+		min-height: 0;
+		transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+	}
+
+	.workArea.expanded,
+	.educationArea.expanded {
+		flex: 1.1;
+	}
+
+	.workArea.collapsed,
+	.educationArea.collapsed {
+		flex: 0.8;
+	}
+}

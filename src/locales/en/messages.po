@@ -1,0 +1,153 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-05-23 23:16-0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/pages/sobre/index.tsx:24
+msgid "← VOLTAR PARA HOME"
+msgstr "← BACK TO HOME"
+
+#: src/pages/sobre/_components/WorkExperienceCard/WorkExperienceCard.tsx:60
+msgid "Atualmente"
+msgstr "Currently"
+
+#: src/pages/sobre/_components/EducationCard/EducationCard.tsx:18
+msgid "Certificados & Formações"
+msgstr "Certificates & Education"
+
+#: src/constants/education.ts:27
+msgid "Cimol"
+msgstr "Cimol"
+
+#: src/constants/education.ts:19
+msgid "CWI Crescer - Level 1"
+msgstr "CWI Crescer - Level 1"
+
+#: src/constants/education.ts:12
+msgid "CWI Crescer - Level 2"
+msgstr "CWI Crescer - Level 2"
+
+#: src/constants/education.ts:13
+#: src/constants/education.ts:20
+msgid "CWI Software"
+msgstr "CWI Software"
+
+#: src/constants/works.ts:7
+msgid "Desenvolvedor Front‑end"
+msgstr "Front-end Developer"
+
+#: src/constants/works.ts:15
+msgid "Estágio Desenvolvedor Front‑end"
+msgstr "Front-end Developer Intern"
+
+#: src/constants/projects.ts:24
+msgid "Este site :)"
+msgstr "This site :)"
+
+#: src/pages/sobre/_components/WorkExperienceCard/WorkExperienceCard.tsx:20
+msgid "Exp. Profissionais"
+msgstr "Work Experience"
+
+#: src/constants/education.ts:6
+msgid "Faccat"
+msgstr "Faccat"
+
+#: src/pages/_components/PersonalPhotoCard/PersonalPhotoCard.tsx:13
+msgid "Foto pessoal."
+msgstr "Personal photo."
+
+#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:53
+msgid "Front-end Developer"
+msgstr "Front-end Developer"
+
+#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:46
+msgid "Goku voando"
+msgstr "Goku flying"
+
+#: src/pages/sobre/_components/EducationCard/EducationCard.tsx:46
+msgid "Icone"
+msgstr "Icon"
+
+#: src/pages/sobre/_components/WorkExperienceCard/WorkExperienceCard.tsx:48
+msgid "Icone da empresa"
+msgstr "Company icon"
+
+#. placeholder {0}: socialMedia.name
+#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:67
+msgid "Ícone do {0}"
+msgstr "Icon of {0}"
+
+#: src/constants/projects.ts:18
+msgid "Landing page institucional para escritório de advocacia com foco em conversão."
+msgstr "Institutional landing page for a law firm focused on conversion."
+
+#: src/constants/projects.ts:25
+msgid "Meu portfólio pessoal construído com design Bento Box e foco em UX/UI."
+msgstr "My personal portfolio built with Bento Box design and focus on UX/UI."
+
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:44
+msgid "Minha principal motivação profissional é traduzir regras de negócios complexas em interfaces <0>funcionais, acessíveis e de alto desempenho</0>. Busco o aprimoramento contínuo através do estudo de novas tecnologias e da aplicação das melhores práticas de engenharia de software. Meu objetivo é sempre entregar soluções robustas que gerem <1>valor real</1> para o cliente e garantam a melhor experiência possível para o usuário final."
+msgstr "My main professional motivation is to translate complex business rules into <0>functional, accessible, and high-performance</0> interfaces. I seek continuous improvement through the study of new technologies and the application of best software engineering practices. My goal is always to deliver robust solutions that generate <1>real value</1> for the client and ensure the best possible experience for the end user."
+
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:27
+msgid "Nos últimos quatro anos, atuo na <0>CWI Software</0>, alocado de forma contínua em projetos para a <1>Coca-Cola</1>. Durante esse período, fui responsável por desenvolver uma ampla variedade de sistemas de alta visibilidade e impacto. Meu histórico inclui a entrega de soluções tecnológicas para grandes eventos, como <2>Rock in Rio</2> e <3>The Town</3>, além da criação de sites institucionais, da plataforma de gestão das <4>Caravanas de Natal</4> e de sistemas corporativos estratégicos utilizados pelas operações da Coca-Cola LATAM."
+msgstr "Over the past four years, I have been working at <0>CWI Software</0>, continuously allocated to projects for <1>Coca-Cola</1>. During this time, I have been responsible for developing a wide range of highly visible and impactful systems. My track record includes delivering technological solutions for major events, such as <2>Rock in Rio</2> and <3>The Town</3>, as well as creating institutional sites, the management platform for the <4>Christmas Caravans</4>, and strategic corporate systems used by Coca-Cola LATAM operations."
+
+#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:35
+msgid "Oi, eu sou"
+msgstr "Hi, I am"
+
+#: src/constants/text.ts:5
+msgid "Olá! Sou João Paulo, um entusiasta da tecnologia e atualmente um desenvolvedor front-end em constante evolução. Atualmente, estou aprimorando minhas habilidades e conhecimentos na área, enquanto curso Tecnólogo em Sistemas para Internet na FACCAT."
+msgstr "Hello! I am João Paulo, a technology enthusiast and currently a constantly evolving front-end developer. Currently, I am improving my skills and knowledge in the area, while studying Internet Systems Technology at FACCAT."
+
+#: src/constants/text.ts:9
+msgid "Projetos"
+msgstr "Projects"
+
+#: src/pages/_components/PersonalPhotoCard/PersonalPhotoCard.tsx:23
+msgid "Seta"
+msgstr "Arrow"
+
+#: src/constants/projects.ts:17
+msgid "Site jurídico"
+msgstr "Law firm site"
+
+#: src/constants/text.ts:4
+#: src/pages/_components/PersonalPhotoCard/PersonalPhotoCard.tsx:19
+msgid "Sobre mim"
+msgstr "About me"
+
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:8
+msgid "Sobre Mim"
+msgstr "About Me"
+
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:12
+msgid "Sou desenvolvedor front-end formado em Sistemas para Internet pela <0>FACCAT</0>. Ao longo da minha trajetória, especializei-me na construção de aplicações web eficientes e escaláveis, tendo o <1>React</1> como minha principal tecnologia de atuação. Além do ecossistema JavaScript, possuo experiência prática no desenvolvimento e manutenção de plataformas utilizando <2>PHP</2> e <3>WordPress</3>, o que me proporciona versatilidade para me adaptar a diferentes requisitos técnicos e necessidades de arquitetura."
+msgstr "I am a front-end developer with a degree in Internet Systems from <0>FACCAT</0>. Throughout my career, I have specialized in building efficient and scalable web applications, with <1>React</1> as my main technology. Besides the JavaScript ecosystem, I have practical experience in developing and maintaining platforms using <2>PHP</2> and <3>WordPress</3>, which gives me versatility to adapt to different technical requirements and architectural needs."
+
+#: src/constants/works.ts:23
+msgid "Suporte Técnico"
+msgstr "Technical Support"
+
+#: src/pages/sobre/_components/TechStackCard/TechStackCard.tsx:9
+msgid "Tech Stack"
+msgstr "Tech Stack"
+
+#: src/constants/education.ts:26
+msgid "Técnico em Informática"
+msgstr "IT Technician"
+
+#: src/constants/education.ts:5
+msgid "Técnologo em Sistemas para Internet"
+msgstr "Internet Systems Technology"

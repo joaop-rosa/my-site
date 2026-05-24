@@ -1,0 +1,43 @@
+.techCard {
+	padding: 32px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--white-10);
+	border-radius: 40px;
+	background: var(--white-05);
+	height: 100%;
+	transition:
+		box-shadow 0.3s ease,
+		border-color 0.3s ease;
+}
+
+.techCard:hover {
+	box-shadow: 0 0 30px var(--amber-15);
+	border-color: var(--amber-40);
+}
+
+.title {
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--white);
+	margin-bottom: 24px;
+	flex-shrink: 0;
+}
+
+.badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	overflow-y: auto;
+	padding-right: 10px;
+}
+
+.badge {
+	padding: 8px 16px;
+	border-radius: 20px;
+	background: var(--amber-15);
+	border: 1px solid var(--amber-30);
+	color: var(--amber-hex);
+	font-size: 14px;
+	font-weight: 600;
+}

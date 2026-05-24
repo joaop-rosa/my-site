@@ -4,6 +4,32 @@
 	--mine-shaft: #333333;
 	--alto: #d4d4d4;
 	--black: #000;
+	--amber-hex: #d67711;
+	--amber-filter: brightness(0) saturate(100%) invert(54%) sepia(49%)
+		saturate(1915%) hue-rotate(351deg) brightness(87%) contrast(89%);
+
+	--zinc-light: #e4e4e7;
+	--zinc-regular: #a1a1aa;
+	--zinc-dark: #71717a;
+	--shark: rgb(35, 35, 38);
+	--shark-light-40: rgba(39, 39, 42, 0.4);
+
+	--white-00: rgba(255, 255, 255, 0);
+	--white-05: rgba(255, 255, 255, 0.05);
+	--white-06: rgba(255, 255, 255, 0.06);
+	--white-09: rgba(255, 255, 255, 0.09);
+	--white-10: rgba(255, 255, 255, 0.1);
+
+	--black-50: rgba(0, 0, 0, 0.5);
+	--black-90: rgba(0, 0, 0, 0.9);
+
+	--amber-10: rgba(214, 119, 17, 0.1);
+	--amber-15: rgba(214, 119, 17, 0.15);
+	--amber-30: rgba(214, 119, 17, 0.3);
+	--amber-40: rgba(214, 119, 17, 0.4);
+	--amber-50: rgba(214, 119, 17, 0.5);
+
+	--shark-00: rgba(35, 35, 38, 0);
 }
 
 * {
@@ -12,13 +38,15 @@
 	margin: 0;
 }
 
-html,
+html {
+	background-color: var(--cod-gray);
+}
+
 body {
-	max-width: 100vw;
 	min-height: 100vh;
 	overflow-x: hidden;
-	background-color: var(--cod-gray);
 	font-family: "Inter", sans-serif;
+	color: var(--white);
 }
 
 a {
@@ -36,4 +64,14 @@ a {
 
 ::-webkit-scrollbar-track-piece {
 	background-color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 }

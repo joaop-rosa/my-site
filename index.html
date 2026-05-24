@@ -13,7 +13,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="root"></div>
+    <style>
+      body {
+        margin: 0;
+      }
+      #initial-loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #181818; /* --cod-gray */
+      }
+      .pulse-loader {
+        width: 80px;
+        height: auto;
+        animation: pulse-animation 1.5s ease-in-out infinite;
+      }
+      @keyframes pulse-animation {
+        0% { transform: scale(0.9); opacity: 0.6; }
+        50% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(0.9); opacity: 0.6; }
+      }
+    </style>
+    <div id="root">
+      <div id="initial-loader">
+        <img src="/icons/jp.svg" alt="Loading" class="pulse-loader" />
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,13 +1,15 @@
+import { Routes } from "@generouted/react-router";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import { LanguageProvider } from "./contexts/LanguageProvider";
 import "./globals.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "./App.module.css";
 
 // biome-ignore lint/style/noNonNullAssertion: fix later
 ReactDOM.createRoot(document.getElementById("root")!).render(
 	<React.StrictMode>
-		<App />
+		<LanguageProvider>
+			<Routes />
+		</LanguageProvider>
 	</React.StrictMode>,
 );

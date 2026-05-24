@@ -1,0 +1,105 @@
+.selectorContainer {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	z-index: 100;
+}
+
+.activeLanguage {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	background: transparent;
+	border: none;
+	color: var(--white-50);
+	padding: 8px 12px;
+	border-radius: 8px;
+	font-size: 12px;
+	font-weight: 500;
+	cursor: pointer;
+	transition:
+		color 0.3s ease,
+		background 0.3s ease;
+}
+
+.activeLanguage:hover,
+.activeLanguage:focus {
+	color: var(--white);
+	background: rgba(255, 255, 255, 0.05);
+	outline: none;
+}
+
+.flag {
+	width: 20px;
+	height: 14px;
+	border-radius: 2px;
+	object-fit: cover;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.arrow {
+	font-size: 8px;
+	margin-left: 4px;
+	opacity: 0.7;
+}
+
+.dropdownList {
+	position: absolute;
+	top: calc(100% + 4px);
+	right: 0;
+	padding: 4px;
+	list-style: none;
+	background: var(--mine-shaft);
+	border: 1px solid var(--white-06);
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+	min-width: 120px;
+}
+
+/* Pseudo element to cover the gap and prevent onMouseLeave from firing */
+.dropdownList::before {
+	content: "";
+	position: absolute;
+	top: -8px;
+	left: 0;
+	right: 0;
+	height: 8px;
+}
+
+.optionBtn {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	background: transparent;
+	border: none;
+	color: var(--white-80);
+	padding: 8px 12px;
+	border-radius: 6px;
+	font-size: 13px;
+	cursor: pointer;
+	text-align: left;
+	transition:
+		background 0.2s ease,
+		color 0.2s ease;
+}
+
+.optionBtn:hover {
+	background: rgba(255, 255, 255, 0.05);
+	color: var(--white);
+}
+
+.optionBtn.selected {
+	color: var(--amber);
+	background: rgba(214, 119, 17, 0.1);
+}
+
+@media screen and (min-width: 1180px) {
+	.selectorContainer {
+		top: 24px;
+		right: 24px;
+	}
+}

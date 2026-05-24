@@ -1,334 +1,116 @@
 .main {
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
 }
 
 .container {
-	width: 1100px;
+	width: 100%;
+	max-width: 1200px;
 	margin: auto;
-	padding: 25px;
+	padding: 80px 24px 64px;
 }
 
+/* ==========================================
+   MOBILE FIRST BASE (Single Column)
+   ========================================== */
 .content {
 	display: grid;
-	grid-template-columns: repeat(16, 1fr);
-	grid-template-rows: repeat(2, minmax(auto, 48%));
-	gap: 25px;
+	grid-template-columns: 1fr;
+	gap: 24px;
 	width: 100%;
-	height: 90vh;
-	min-height: 700px;
-	max-height: 750px;
 }
 
-.cardAbout {
-	grid-column: span 5;
-	grid-row: auto;
+/* Removed min-height hack */
+.content > * {
+	min-width: 0;
 }
 
-.cardCarousel {
-	grid-column: span 9;
-	grid-row: auto;
-}
-
-.cardName {
-	padding: 20px 25px 80px 30px;
-	grid-column: span 7;
-	grid-row: auto;
+.rightColumn {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	border: solid 2px white;
-	border-radius: 40px;
-	color: var(--alto);
+	gap: 24px;
+	min-width: 0;
 }
 
-.presentation {
-	font-size: 32px;
-	font-weight: 500;
+div.cardCarousel {
+	background: linear-gradient(165deg, var(--white-10) 0%, var(--white-00) 100%);
+	backdrop-filter: blur(24px) saturate(180%);
+	-webkit-backdrop-filter: blur(24px) saturate(180%);
+	border: 1px solid var(--white-06);
+	transition:
+		box-shadow 0.3s ease,
+		border-color 0.3s ease,
+		background 0.3s ease;
 }
 
-.name {
-	font-size: 40px;
-	font-weight: 700;
-	margin-top: 20px;
+div.cardCarousel:hover {
+	box-shadow: 0 0 40px var(--amber-15);
+	border-color: var(--amber-30);
 }
 
-.description {
-	font-size: 28px;
-	font-weight: 600;
-}
-
-.customCardPersonalWrapper {
-	grid-row: auto;
-	grid-column: span 4;
-}
-
-.personalImageWrapper {
-	border-radius: 40px;
-	position: relative;
-	overflow: hidden;
-	height: 100%;
-}
-
-.personalImageWrapper::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 100%;
-	background-color: transparent;
-	transition: background-color 0.5s ease;
-}
-
-.personalImage {
-	object-fit: cover;
-}
-
-.personalImageWrapper:hover::after {
-	background-color: rgba(0, 0, 0, 0.5);
-}
-
-.personalImageWrapper:hover .socialMediasWrapper {
-	grid-template-columns: 50px 50px;
-	grid-template-rows: 50px;
-}
-
-.personalImageWrapper:hover .socialMedia {
-	padding: 9px;
-}
-
-.socialMediasWrapper {
-	position: absolute;
-	display: grid;
-	grid-template-columns: 35px 35px;
-	grid-template-rows: 35px;
-	bottom: 10%;
-	left: 0;
-	right: 0;
-	justify-content: center;
-	gap: 10px;
-	z-index: 2;
-	transition: all 0.5s ease;
-}
-
-.socialMedia {
-	background-color: black;
-	border-radius: 50px;
-	position: relative;
-	padding: 5px;
-}
-
-.iconWrapper {
-	position: relative;
-	height: 100%;
-}
-
-.workCardWrapper {
-	grid-column: span 7;
-	grid-row: auto;
-	padding: 20px 25px 35px;
-	border-radius: 40px;
-	background-color: var(--alto);
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
-}
-
-.worksWrapper {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(auto, 360px));
-	align-items: flex-start;
-	flex: unset;
-	row-gap: 20px;
-	column-gap: 30px;
-	overflow-y: auto;
-	padding-right: 10px;
-}
-
-.work {
-	display: flex;
-	align-items: center;
-	gap: 15px;
-}
-
-.workIconWrapper {
-	padding: 5px;
-	border-radius: 50px;
-}
-
-.workIconContainer {
-	position: relative;
-	width: 45px;
-	height: 45px;
-}
-
-.workTextWrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 2px;
-	flex: 1;
-}
-
-.workTitle {
-	font-size: 20px;
-}
-
-.workSubtitle {
-	font-size: 18px;
-}
-
-.workTime {
-	font-size: 18px;
-}
-
-@media screen and (max-width: 1024px) {
+/* ==========================================
+   TABLET (2 Columns)
+   ========================================== */
+@media screen and (min-width: 768px) {
 	.content {
-		grid-template-columns: repeat(16, 1fr);
-		grid-template-rows: repeat(auto-fit, 1fr);
-		height: unset;
-		min-height: 700px;
-		max-height: unset;
-		padding-bottom: 40px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto auto auto;
+		gap: 24px;
 	}
 
-	.cardName {
-		grid-column: span 10;
-		grid-row: auto;
-		order: 1;
-		min-height: 275px;
+	.welcomeGridArea {
+		grid-column: 1 / 3;
+		grid-row: 1;
 	}
-
-	.cardAbout {
-		grid-column: span 6;
-		grid-row: auto;
-		order: 2;
-		min-height: 270px;
+	.rightColumn {
+		grid-column: 1 / 3;
+		grid-row: 2;
+		flex-direction: row;
 	}
-
+	.rightColumn > * {
+		flex: 1;
+	}
 	.cardCarousel {
-		grid-column: span 11;
-		grid-row: auto;
-		order: 3;
-		min-height: 320px;
-	}
-
-	.workCardWrapper {
-		grid-column: span 16;
-		grid-row: auto;
-		order: 5;
-		min-height: 250px;
-	}
-
-	.worksWrapper {
-		padding-right: 0;
-	}
-
-	.customCardPersonalWrapper {
-		grid-row: auto;
-		grid-column: span 5;
-		order: 4;
-		min-height: 360px;
+		grid-column: 1 / 3;
+		grid-row: 3;
 	}
 }
 
-@media screen and (max-width: 920px) {
-	.cardName {
-		grid-column: span 10;
-	}
-
-	.cardAbout {
-		grid-column: span 6;
-	}
-
-	.cardCarousel {
-		grid-column: span 10;
-	}
-
-	.customCardPersonalWrapper {
-		grid-column: span 6;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.cardName {
-		padding-bottom: 60px;
+/* ==========================================
+   DESKTOP (2 Columns)
+   ========================================== */
+@media screen and (min-width: 1180px) {
+	.container {
+		padding: 70px 40px;
 	}
 
 	.content {
-		grid-template-columns: repeat(7, 1fr);
+		grid-template-columns: 2fr 1.2fr;
+		grid-template-rows: 1fr 1.1fr; /* Top row shorter than bottom row */
+		max-height: 850px;
 	}
 
-	.cardName {
-		grid-column: span 7;
+	.welcomeGridArea {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
 	}
-
-	.cardAbout {
-		grid-column: span 4;
-		order: 2;
-	}
-
 	.cardCarousel {
-		grid-column: span 7;
-		order: 4;
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
 	}
-
-	.workCardWrapper {
-		grid-column: span 7;
-		min-height: 280px;
+	.rightColumn {
+		grid-column: 2 / 3;
+		grid-row: 1 / 3;
+		gap: 24px;
+		flex-direction: column;
 	}
-
-	.customCardPersonalWrapper {
-		grid-column: span 3;
-		order: 1;
+	.photoArea {
+		flex: 1;
+		min-height: 0;
 	}
-
-	.socialMediasWrapper {
-		grid-template-columns: 45px 45px;
-		grid-template-rows: 45px;
-	}
-}
-
-@media screen and (max-width: 535px) {
-	.cardName {
-		padding-left: 20px;
-	}
-
-	.cardName {
-		grid-column: span 7;
-	}
-
-	.cardAbout {
-		grid-column: span 7;
-	}
-
-	.cardCarousel {
-		grid-column: span 7;
-	}
-
-	.workCardWrapper {
-		grid-column: span 7;
-	}
-
-	.customCardPersonalWrapper {
-		grid-column: span 7;
-	}
-
-	.description {
-		font-size: 24px;
-	}
-
-	.personalImage {
-		object-position: 50% 15%;
-	}
-
-	.workTitle {
-		font-size: 18px;
-	}
-
-	.workSubtitle {
-		font-size: 16px;
+	.photoArea > * {
+		height: 100%;
 	}
 }
