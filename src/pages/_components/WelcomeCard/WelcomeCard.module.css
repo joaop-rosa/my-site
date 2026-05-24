@@ -104,7 +104,10 @@
 	text-decoration: none;
 	opacity: 1;
 	color: var(--amber-hex);
-	text-shadow: 0 0 10px var(--amber-hex), 0 0 20px var(--amber-hex), 0 0 30px var(--amber-hex);
+	text-shadow:
+		0 0 10px var(--amber-hex),
+		0 0 20px var(--amber-hex),
+		0 0 30px var(--amber-hex);
 	transform: scale(1.1);
 	transition: all 0.1s ease-in;
 }
@@ -119,8 +122,8 @@
 }
 
 .gokuContainer {
-position: relative;
-display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 .gokuGif {

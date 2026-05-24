@@ -1,3 +1,5 @@
+import { msg } from "@lingui/core/macro";
+
 export const PROJECTS = [
 	// {
 	// 	name: "Pokedex",
@@ -12,17 +14,15 @@ export const PROJECTS = [
 	// 	height: 95,
 	// },
 	{
-		name: "Site jurídico",
-		description:
-			"Landing page institucional para escritório de advocacia com foco em conversão.",
+		name: msg`Site jurídico`,
+		description: msg`Landing page institucional para escritório de advocacia com foco em conversão.`,
 		image: "/images/jessicaSite.png",
 		techs: ["Next.js"],
 		prodUrl: "https://jessicabirck.adv.br/",
 	},
 	{
-		name: "Este site :)",
-		description:
-			"Meu portfólio pessoal construído com design Bento Box e foco em UX/UI.",
+		name: msg`Este site :)`,
+		description: msg`Meu portfólio pessoal construído com design Bento Box e foco em UX/UI.`,
 		image: "/images/esteSite.png",
 		techs: ["React", "CSS Modules", "Vite"],
 		repoUrl: "https://github.com/joaop-rosa/my-site",

@@ -1,3 +1,4 @@
+import { useLingui } from "@lingui/react/macro";
 import s from "@/App.module.css";
 import { Card } from "@/components/cards/Card";
 import { CARD_THEME, CARD_TYPE } from "@/components/cards/constants";
@@ -7,6 +8,14 @@ import { PersonalPhotoCard } from "./_components/PersonalPhotoCard/PersonalPhoto
 import { WelcomeCard } from "./_components/WelcomeCard/WelcomeCard";
 
 export default function Home() {
+	const { t } = useLingui();
+
+	const translatedProjects = PROJECTS.map((project) => ({
+		...project,
+		name: t(project.name),
+		description: t(project.description),
+	}));
+
 	return (
 		<main className={s.main}>
 			<div className={s.container}>
@@ -16,10 +25,10 @@ export default function Home() {
 					</div>
 
 					<Card
-						title={PROJECT_CARD.TITLE}
+						title={t(PROJECT_CARD.TITLE)}
 						type={CARD_TYPE.CAROUSEL}
 						theme={CARD_THEME.DARK}
-						itens={PROJECTS}
+						itens={translatedProjects}
 						className={s.cardCarousel}
 					/>
 

@@ -1,8 +1,10 @@
+import { Trans, useLingui } from "@lingui/react/macro";
 import { useRef, useState } from "react";
 import { SOCIAL_MEDIAS } from "@/constants/socialMedias";
 import s from "./WelcomeCard.module.css";
 
 export function WelcomeCard() {
+	const { t } = useLingui();
 	const [gokuState, setGokuState] = useState<"idle" | "flying" | "leaving">(
 		"idle",
 	);
@@ -30,7 +32,7 @@ export function WelcomeCard() {
 	return (
 		<div className={s.cardName}>
 			<h3 className={s.presentation}>
-				Oi, eu sou{" "}
+				<Trans>Oi, eu sou</Trans>{" "}
 				{/** biome-ignore lint/a11y/noStaticElementInteractions: is necessary */}
 				<span
 					className={s.gokuContainer}
@@ -41,13 +43,15 @@ export function WelcomeCard() {
 					<img
 						ref={gifRef}
 						src="/images/goku.gif"
-						alt="Goku voando"
+						alt={t`Goku voando`}
 						className={`${s.gokuGif} ${s[gokuState]}`}
 					/>
 				</span>
 			</h3>
 			<h1 className={s.name}>João Paulo</h1>
-			<h2 className={s.description}>Front-end Developer</h2>
+			<h2 className={s.description}>
+				<Trans>Front-end Developer</Trans>
+			</h2>
 			<div className={s.socialMediasWrapper}>
 				{SOCIAL_MEDIAS.map((socialMedia) => {
 					return (
@@ -60,7 +64,7 @@ export function WelcomeCard() {
 							<div className={s.iconWrapper}>
 								<img
 									src={socialMedia.icon}
-									alt={`Ícone do ${socialMedia.name}`}
+									alt={t`Ícone do ${socialMedia.name}`}
 									className={s.iconImage}
 								/>
 							</div>

@@ -1,3 +1,4 @@
+import { Trans } from "@lingui/react/macro";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { BioCard } from "./_components/BioCard/BioCard";
@@ -20,7 +21,7 @@ export default function Sobre() {
 					onClick={() => navigate("/")}
 					className={s.backButton}
 				>
-					← VOLTAR PARA HOME
+					<Trans>← VOLTAR PARA HOME</Trans>
 				</button>
 				<div className={s.content}>
 					<div className={s.leftColumn}>

@@ -6,11 +6,14 @@
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
-		"lint": "biome lint .",
-		"format": "biome check --write ."
+		"lint": "biome lint . && lingui compile --strict",
+		"format": "biome check --write .",
+		"extract": "lingui extract",
+		"compile": "lingui compile"
 	},
 	"dependencies": {
 		"@generouted/react-router": "1.20.2",
+		"@lingui/react": "6.1.0",
 		"classnames": "2.5.1",
 		"framer-motion": "12.40.0",
 		"react": "18.3.1",
@@ -19,6 +22,10 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.4.15",
+		"@lingui/babel-plugin-lingui-macro": "6.1.0",
+		"@lingui/cli": "6.1.0",
+		"@lingui/format-po": "6.1.0",
+		"@lingui/vite-plugin": "6.1.0",
 		"@types/node": "20.19.41",
 		"@types/react": "18.3.29",
 		"@types/react-dom": "18.3.7",

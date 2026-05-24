@@ -1,3 +1,4 @@
+import { Trans, useLingui } from "@lingui/react/macro";
 import cn from "classnames";
 import { WORKS } from "@/constants/works";
 import { useDelayedScroll } from "@/hooks/useDelayedScroll";
@@ -10,11 +11,14 @@ interface WorkExperienceCardProps {
 export function WorkExperienceCard({
 	isHovered = false,
 }: WorkExperienceCardProps) {
+	const { t } = useLingui();
 	const showScroll = useDelayedScroll(isHovered);
 
 	return (
 		<div className={s.workCardWrapper}>
-			<h2>Exp. Profissionais</h2>
+			<h2>
+				<Trans>Exp. Profissionais</Trans>
+			</h2>
 			<div
 				className={cn(s.worksWrapper, {
 					[s.overflowAuto]: showScroll,
@@ -41,7 +45,7 @@ export function WorkExperienceCard({
 								>
 									<img
 										src={work.companyIcon}
-										alt="Icone da empresa"
+										alt={t`Icone da empresa`}
 										className={cn(s.workIcon, {
 											[s.workIconImageJpg]: isJpg,
 											[s.workIconImageSvg]: !isJpg,
@@ -50,10 +54,10 @@ export function WorkExperienceCard({
 								</div>
 							</div>
 							<div className={s.workTextWrapper}>
-								<h4 className={s.workTitle}>{work.role}</h4>
+								<h4 className={s.workTitle}>{t(work.role)}</h4>
 								<p className={s.workCompany}>{work.company}</p>
 								<p className={s.workTime}>
-									{work.yearStart} - {work.yearEnd ?? "Atualmente"}
+									{work.yearStart} - {work.yearEnd ?? <Trans>Atualmente</Trans>}
 								</p>
 							</div>
 						</div>
