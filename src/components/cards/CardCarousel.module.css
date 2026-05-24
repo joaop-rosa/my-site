@@ -4,11 +4,7 @@
 	height: auto;
 }
 
-@media screen and (min-width: 768px) {
-	.carouselWrapper {
-		height: 100%;
-	}
-}
+
 
 .sliderContainer {
 	width: 100%;
@@ -31,12 +27,7 @@
 	height: 100%;
 }
 
-@media screen and (min-width: 768px) {
-	.splitLayout {
-		flex-direction: row;
-		align-items: stretch;
-	}
-}
+
 
 .leftColumn {
 	width: 100%;
@@ -47,18 +38,9 @@
 	position: relative;
 }
 
-@media screen and (min-width: 768px) {
-	.leftColumn {
-		flex: 0 0 40%;
-		height: auto;
-	}
-}
 
-@media screen and (min-width: 1180px) {
-	.splitLayout {
-		height: 100%;
-	}
-}
+
+
 
 .projectImage {
 	width: 100%;
@@ -147,16 +129,48 @@
 	background-color: var(--white-05);
 	border: 1px solid var(--white-10);
 	color: var(--zinc-regular);
-	font-size: 14px;
-	font-weight: 600;
-	padding: 8px 16px;
+	padding: 10px;
 	border-radius: 50px;
 	cursor: pointer;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.navIcon {
+	width: 20px;
+	height: 20px;
+	opacity: 0.7;
 	transition: all 0.3s ease;
 }
 
 .navBtn:hover {
 	background-color: var(--amber-10);
 	border-color: var(--amber-hex);
-	color: var(--amber-hex);
+}
+
+.navBtn:hover .navIcon {
+	opacity: 1;
+	filter: var(--amber-filter);
+}
+
+@media screen and (min-width: 768px) {
+	.carouselWrapper {
+		height: 100%;
+	}
+	.splitLayout {
+		flex-direction: row;
+		align-items: stretch;
+	}
+	.leftColumn {
+		flex: 0 0 40%;
+		height: auto;
+	}
+}
+
+@media screen and (min-width: 1180px) {
+	.splitLayout {
+		height: 100%;
+	}
 }

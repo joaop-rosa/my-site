@@ -9,10 +9,6 @@ export type ProjectItem = {
 	techs?: string[];
 	repoUrl?: string;
 	prodUrl?: string;
-	icon: string;
-	alt: string;
-	width: number;
-	height: number;
 };
 
 export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
@@ -133,11 +129,21 @@ export function CardCarousel({ itens }: { itens: ProjectItem[] }) {
 			</div>
 
 			<div className={s.navigationWrapper}>
-				<button type="button" className={s.navBtn} onClick={previous}>
-					Anterior
+				<button
+					type="button"
+					className={s.navBtn}
+					onClick={previous}
+					aria-label="Projeto Anterior"
+				>
+					<img src="/icons/arrow-left.svg" alt="" className={s.navIcon} />
 				</button>
-				<button type="button" className={s.navBtn} onClick={next}>
-					Próximo
+				<button
+					type="button"
+					className={s.navBtn}
+					onClick={next}
+					aria-label="Próximo Projeto"
+				>
+					<img src="/icons/arrow-right.svg" alt="" className={s.navIcon} />
 				</button>
 			</div>
 		</div>

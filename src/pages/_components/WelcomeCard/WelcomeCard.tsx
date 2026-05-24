@@ -6,7 +6,7 @@ export function WelcomeCard() {
 		<div className={s.cardName}>
 			<h3 className={s.presentation}>
 				Oi, eu sou{" "}
-				<span style={{ textDecorationLine: "line-through", opacity: 0.15 }}>
+				<span className={s.strikethrough}>
 					Goku
 				</span>
 			</h3>
@@ -25,14 +25,7 @@ export function WelcomeCard() {
 								<img
 									src={socialMedia.icon}
 									alt={`Ícone do ${socialMedia.name}`}
-									style={{
-										width: "100%",
-										height: "100%",
-										objectFit: "cover",
-										position: "absolute",
-										top: 0,
-										left: 0,
-									}}
+									className={s.iconImage}
 								/>
 							</div>
 						</a>

@@ -18,10 +18,6 @@ export const PROJECTS = [
 		image: "/images/jessicaSite.png",
 		techs: ["Next.js"],
 		prodUrl: "https://jessicabirck.adv.br/",
-		icon: "/icons/next.svg",
-		alt: "Ícone next.",
-		width: 90,
-		height: 90,
 	},
 	{
 		name: "Este site :)",
@@ -30,9 +26,5 @@ export const PROJECTS = [
 		image: "/images/esteSite.png",
 		techs: ["React", "CSS Modules", "Vite"],
 		repoUrl: "https://github.com/joaop-rosa/my-site",
-		icon: "/icons/next.svg",
-		alt: "Ícone next.",
-		width: 90,
-		height: 90,
 	},
 ];
