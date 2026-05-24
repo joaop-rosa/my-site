@@ -2,9 +2,9 @@
 	padding: 32px;
 	display: flex;
 	flex-direction: column;
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	border: 1px solid var(--white-10);
 	border-radius: 40px;
-	background: rgba(255, 255, 255, 0.05);
+	background: var(--white-05);
 	height: 100%;
 	transition:
 		box-shadow 0.3s ease,
@@ -12,14 +12,14 @@
 }
 
 .techCard:hover {
-	box-shadow: 0 0 30px rgba(214, 119, 17, 0.15);
-	border-color: rgba(214, 119, 17, 0.4);
+	box-shadow: 0 0 30px var(--amber-15);
+	border-color: var(--amber-40);
 }
 
 .title {
 	font-size: 24px;
 	font-weight: 700;
-	color: #ffffff;
+	color: var(--white);
 	margin-bottom: 24px;
 	flex-shrink: 0;
 }
@@ -35,8 +35,8 @@
 .badge {
 	padding: 8px 16px;
 	border-radius: 20px;
-	background: rgba(214, 119, 17, 0.15);
-	border: 1px solid rgba(214, 119, 17, 0.3);
+	background: var(--amber-15);
+	border: 1px solid var(--amber-30);
 	color: var(--amber-hex);
 	font-size: 14px;
 	font-weight: 600;

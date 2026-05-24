@@ -1,9 +1,15 @@
+import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Outlet, useLocation } from "react-router";
 
 export default function App() {
 	const location = useLocation();
 	const isSobre = location.pathname.includes("/sobre");
+
+	// biome-ignore lint/correctness/useExhaustiveDependencies: we need to run this on every route change
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location.pathname]);
 
 	return (
 		<AnimatePresence mode="popLayout" initial={false}>

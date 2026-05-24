@@ -9,7 +9,7 @@
 	overflow: hidden;
 	height: 100%;
 	width: 100%;
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	border: 1px solid var(--white-10);
 }
 
 .personalImageWrapper::after {
@@ -27,7 +27,7 @@
 }
 
 .personalImageWrapper:hover::after {
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: var(--black-50);
 }
 
 .photoOverlay {
@@ -36,7 +36,7 @@
 	left: 0;
 	right: 0;
 	padding: 32px;
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+	background: linear-gradient(to top, var(--black-90) 0%, transparent 100%);
 	display: flex;
 	align-items: flex-end;
 	justify-content: flex-start;
@@ -58,7 +58,7 @@
 .aboutOverlayContent h2 {
 	font-size: 24px;
 	font-weight: 700;
-	color: #ffffff;
+	color: var(--white);
 	transition: color 0.3s ease;
 }
 

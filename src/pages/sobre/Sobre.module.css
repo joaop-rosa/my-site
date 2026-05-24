@@ -101,11 +101,13 @@
 		transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 	}
 
-	.expanded {
-		flex: 1.3 !important;
+	.workArea.expanded,
+	.educationArea.expanded {
+		flex: 1.3;
 	}
 
-	.collapsed {
-		flex: 0.8 !important;
+	.workArea.collapsed,
+	.educationArea.collapsed {
+		flex: 0.8;
 	}
 }

@@ -1,12 +1,12 @@
 .workCardWrapper {
 	padding: 32px;
 	border-radius: 40px;
-	background-color: rgba(255, 255, 255, 0.05);
+	background-color: var(--white-05);
 	display: flex;
 	flex-direction: column;
 	gap: 32px;
 	color: var(--white);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	border: 1px solid var(--white-10);
 	transition:
 		box-shadow 0.3s ease,
 		border-color 0.3s ease;
@@ -15,13 +15,13 @@
 }
 
 .workCardWrapper:hover {
-	box-shadow: 0 0 30px rgba(214, 119, 17, 0.15);
-	border-color: rgba(214, 119, 17, 0.4);
+	box-shadow: 0 0 30px var(--amber-15);
+	border-color: var(--amber-40);
 }
 
 .workCardWrapper h2 {
 	font-weight: 600;
-	color: #a1a1aa;
+	color: var(--zinc-regular);
 	font-size: 13px;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -52,7 +52,7 @@
 	top: 44px; /* Bottom of the dot */
 	bottom: -32px; /* Span the 32px gap */
 	width: 2px;
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: var(--white-10);
 	transform: translateX(-50%);
 	z-index: 0;
 	transition: background-color 0.3s ease;
@@ -62,7 +62,7 @@
 	position: relative;
 	border-radius: 50%;
 	padding: 6px;
-	border: 2px solid rgba(255, 255, 255, 0.1);
+	border: 2px solid var(--white-10);
 	background-color: var(--cod-gray);
 	transition:
 		border-color 0.3s ease,
@@ -73,11 +73,11 @@
 
 .work:hover .workIconWrapper {
 	border-color: var(--amber-hex);
-	box-shadow: 0 0 15px rgba(214, 119, 17, 0.5);
+	box-shadow: 0 0 15px var(--amber-50);
 }
 
 .work:hover::before {
-	background-color: rgba(214, 119, 17, 0.3);
+	background-color: var(--amber-30);
 }
 
 .workIconContainer {
@@ -97,28 +97,28 @@
 .workTitle {
 	font-size: 20px;
 	font-weight: 700;
-	color: #ffffff;
+	color: var(--white);
 	line-height: 1.2;
 }
 
 .workCompany {
 	font-size: 16px;
 	font-weight: 600;
-	color: #d4d4d4;
+	color: var(--alto);
 }
 
 .workTime {
 	font-size: 14px;
-	color: #71717a;
+	color: var(--zinc-dark);
 	margin-top: 4px;
 }
 
-.overflowAuto {
-	overflow-y: auto !important;
+.worksWrapper.overflowAuto {
+	overflow-y: auto;
 }
 
-.overflowHidden {
-	overflow-y: hidden !important;
+.worksWrapper.overflowHidden {
+	overflow-y: hidden;
 }
 
 .fadeOverlay {
@@ -129,8 +129,8 @@
 	height: 80px;
 	background: linear-gradient(
 		to top,
-		rgb(35, 35, 38) 0%,
-		rgba(35, 35, 38, 0) 100%
+		var(--shark) 0%,
+		var(--shark-00) 100%
 	);
 	pointer-events: none;
 	opacity: 1;
@@ -140,15 +140,18 @@
 	z-index: 10;
 }
 
-.fadeOut {
-	opacity: 0 !important;
+.fadeOverlay.fadeOut {
+	opacity: 0;
 }
 
 @media screen and (max-width: 1179px) {
-	.worksWrapper {
-		overflow-y: visible !important;
+	.worksWrapper,
+	.worksWrapper.overflowAuto,
+	.worksWrapper.overflowHidden {
+		overflow-y: visible;
 	}
-	.fadeOverlay {
-		display: none !important;
+	.fadeOverlay,
+	.fadeOverlay.fadeOut {
+		display: none;
 	}
 }
