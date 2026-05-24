@@ -1,9 +1,10 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
-import { Outlet, useLocation } from "react-router";
+import { useLocation, useOutlet } from "react-router";
 
 export default function App() {
 	const location = useLocation();
+	const outlet = useOutlet();
 	const isSobre = location.pathname.includes("/sobre");
 
 	// biome-ignore lint/correctness/useExhaustiveDependencies: we need to run this on every route change
@@ -24,7 +25,7 @@ export default function App() {
 				}}
 				style={{ width: "100%" }}
 			>
-				<Outlet />
+				{outlet}
 			</motion.div>
 		</AnimatePresence>
 	);
