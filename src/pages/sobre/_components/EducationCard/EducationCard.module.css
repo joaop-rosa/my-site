@@ -99,7 +99,7 @@
 	color: var(--zinc-dark);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 820px) {
 	.educationCardWrapper {
 		padding: 32px;
 	}

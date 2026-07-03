@@ -1,13 +1,25 @@
 import { Trans } from "@lingui/react/macro";
+import cn from "classnames";
+import { useState } from "react";
+import { useBreakpoint } from "@/hooks/useMobileBreakpoint";
 import s from "./BioCard.module.css";
 
 export function BioCard() {
+	const [isExpanded, setIsExpanded] = useState(false);
+	const { isDesktop } = useBreakpoint();
+	const shouldCollapse = !isDesktop;
+
 	return (
 		<div className={s.bioCard}>
 			<h2 className={s.title}>
 				<Trans>Sobre Mim</Trans>
 			</h2>
-			<div className={s.content}>
+			<div
+				id="bio-content"
+				className={cn(s.content, {
+					[s.collapsed]: shouldCollapse && !isExpanded,
+				})}
+			>
 				<p>
 					<Trans>
 						Sou desenvolvedor front-end formado em Sistemas para Internet pela{" "}
@@ -54,7 +66,20 @@ export function BioCard() {
 						garantam a melhor experiência possível para o usuário final.
 					</Trans>
 				</p>
+				{shouldCollapse && !isExpanded && <div className={s.fadeOverlay} />}
 			</div>
+
+			{shouldCollapse && (
+				<button
+					type="button"
+					className={s.toggleButton}
+					aria-expanded={isExpanded}
+					aria-controls="bio-content"
+					onClick={() => setIsExpanded(!isExpanded)}
+				>
+					{isExpanded ? <Trans>Ver menos</Trans> : <Trans>Ver mais</Trans>}
+				</button>
+			)}
 		</div>
 	);
 }

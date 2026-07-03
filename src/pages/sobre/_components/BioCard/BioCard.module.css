@@ -41,3 +41,50 @@
 	color: var(--white);
 	font-weight: 600;
 }
+
+.content.collapsed {
+	max-height: 250px;
+	overflow: hidden;
+	position: relative;
+}
+
+@media screen and (min-width: 820px) {
+	.content.collapsed {
+		max-height: 380px;
+	}
+}
+
+.fadeOverlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	background: linear-gradient(
+		to top,
+		var(--shark) 0%,
+		var(--shark-00) 100%
+	);
+	pointer-events: none;
+}
+
+.toggleButton {
+	background: none;
+	border: none;
+	color: var(--amber-hex);
+	font-family: inherit;
+	font-size: 14px;
+	font-weight: 700;
+	cursor: pointer;
+	margin-top: 16px;
+	display: inline-flex;
+	align-items: center;
+	align-self: flex-start;
+	transition: opacity 0.2s ease;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.toggleButton:hover {
+	opacity: 0.8;
+}

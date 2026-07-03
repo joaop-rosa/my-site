@@ -52,25 +52,44 @@ export function WelcomeCard() {
 			<h2 className={s.description}>
 				<Trans>Front-end Developer</Trans>
 			</h2>
-			<div className={s.socialMediasWrapper}>
-				{SOCIAL_MEDIAS.map((socialMedia) => {
-					return (
-						<a
-							className={s.socialMedia}
-							key={socialMedia.name}
-							href={socialMedia.url}
-							target="_blanck"
-						>
-							<div className={s.iconWrapper}>
-								<img
-									src={socialMedia.icon}
-									alt={t`Ícone do ${socialMedia.name}`}
-									className={s.iconImage}
-								/>
-							</div>
-						</a>
-					);
-				})}
+			<div className={s.actionsWrapper}>
+				<div className={s.socialMediasWrapper}>
+					{SOCIAL_MEDIAS.map((socialMedia) => {
+						return (
+							<a
+								className={s.socialMedia}
+								key={socialMedia.name}
+								href={socialMedia.url}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<div className={s.iconWrapper}>
+									<img
+										src={socialMedia.icon}
+										alt={t`Ícone do ${socialMedia.name}`}
+										className={s.iconImage}
+									/>
+								</div>
+							</a>
+						);
+					})}
+				</div>
+
+				<a
+					href="/CV-JoaoPauloDaRosa.pdf"
+					download="CV-JoaoPauloDaRosa.pdf"
+					className={s.downloadBtn}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img
+						src="/icons/download.svg"
+						alt=""
+						aria-hidden="true"
+						className={s.downloadIcon}
+					/>
+					<Trans>Baixar CV</Trans>
+				</a>
 			</div>
 		</div>
 	);

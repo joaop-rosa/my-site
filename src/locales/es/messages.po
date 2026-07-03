@@ -21,6 +21,10 @@ msgstr "← VOLVER AL INICIO"
 msgid "Atualmente"
 msgstr "Actualmente"
 
+#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:89
+msgid "Baixar CV"
+msgstr "Descargar CV"
+
 #: src/pages/sobre/_components/EducationCard/EducationCard.tsx:18
 msgid "Certificados & Formações"
 msgstr "Certificados y Educación"
@@ -50,7 +54,7 @@ msgstr "Desarrollador Front-end"
 msgid "Estágio Desenvolvedor Front‑end"
 msgstr "Pasante Desarrollador Front-end"
 
-#: src/constants/projects.ts:24
+#: src/constants/projects.ts:20
 msgid "Este site :)"
 msgstr "Este sitio :)"
 
@@ -82,24 +86,28 @@ msgstr "Icono"
 msgid "Icone da empresa"
 msgstr "Icono de la empresa"
 
+#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:86
+msgid "Ícone de download"
+msgstr "Icono de descarga"
+
 #. placeholder {0}: socialMedia.name
-#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:67
+#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:68
 msgid "Ícone do {0}"
 msgstr "Icono de {0}"
 
-#: src/constants/projects.ts:18
+#: src/constants/projects.ts:14
 msgid "Landing page institucional para escritório de advocacia com foco em conversão."
 msgstr "Landing page institucional para bufete de abogados enfocada en conversión."
 
-#: src/constants/projects.ts:25
+#: src/constants/projects.ts:21
 msgid "Meu portfólio pessoal construído com design Bento Box e foco em UX/UI."
 msgstr "Mi portafolio personal construido con diseño Bento Box y enfoque en UX/UI."
 
-#: src/pages/sobre/_components/BioCard/BioCard.tsx:44
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:55
 msgid "Minha principal motivação profissional é traduzir regras de negócios complexas em interfaces <0>funcionais, acessíveis e de alto desempenho</0>. Busco o aprimoramento contínuo através do estudo de novas tecnologias e da aplicação das melhores práticas de engenharia de software. Meu objetivo é sempre entregar soluções robustas que gerem <1>valor real</1> para o cliente e garantam a melhor experiência possível para o usuário final."
 msgstr "Mi principal motivación profesional es traducir reglas de negocio complejas en interfaces <0>funcionales, accesibles y de alto rendimiento</0>. Busco la mejora continua a través del estudio de nuevas tecnologías y la aplicación de las mejores prácticas de ingeniería de software. Mi objetivo es siempre ofrecer soluciones robustas que generen <1>valor real</1> para el cliente y garanticen la mejor experiencia posible para el usuario final."
 
-#: src/pages/sobre/_components/BioCard/BioCard.tsx:27
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:38
 msgid "Nos últimos quatro anos, atuo na <0>CWI Software</0>, alocado de forma contínua em projetos para a <1>Coca-Cola</1>. Durante esse período, fui responsável por desenvolver uma ampla variedade de sistemas de alta visibilidade e impacto. Meu histórico inclui a entrega de soluções tecnológicas para grandes eventos, como <2>Rock in Rio</2> e <3>The Town</3>, além da criação de sites institucionais, da plataforma de gestão das <4>Caravanas de Natal</4> e de sistemas corporativos estratégicos utilizados pelas operações da Coca-Cola LATAM."
 msgstr "En los últimos cuatro años, he estado trabajando en <0>CWI Software</0>, asignado de forma continua a proyectos para <1>Coca-Cola</1>. Durante este período, he sido responsable de desarrollar una amplia variedad de sistemas de gran visibilidad e impacto. Mi historial incluye la entrega de soluciones tecnológicas para grandes eventos, como <2>Rock in Rio</2> y <3>The Town</3>, así como la creación de sitios web institucionales, la plataforma de gestión de las <4>Caravanas de Navidad</4> y sistemas corporativos estratégicos utilizados por las operaciones de Coca-Cola LATAM."
 
@@ -111,6 +119,10 @@ msgstr "Hola, soy"
 msgid "Olá! Sou João Paulo, um entusiasta da tecnologia e atualmente um desenvolvedor front-end em constante evolução. Atualmente, estou aprimorando minhas habilidades e conhecimentos na área, enquanto curso Tecnólogo em Sistemas para Internet na FACCAT."
 msgstr "¡Hola! Soy João Paulo, un entusiasta de la tecnología y un desarrollador front-end en constante evolución. Actualmente, estoy perfeccionando mis habilidades y conocimientos en el área, mientras curso la carrera de Tecnólogo en Sistemas para Internet en la FACCAT."
 
+#: src/constants/projects.ts:5
+msgid "Pokedex"
+msgstr "Pokedex"
+
 #: src/constants/text.ts:9
 msgid "Projetos"
 msgstr "Proyectos"
@@ -119,7 +131,7 @@ msgstr "Proyectos"
 msgid "Seta"
 msgstr "Flecha"
 
-#: src/constants/projects.ts:17
+#: src/constants/projects.ts:13
 msgid "Site jurídico"
 msgstr "Sitio web jurídico"
 
@@ -128,11 +140,11 @@ msgstr "Sitio web jurídico"
 msgid "Sobre mim"
 msgstr "Sobre mí"
 
-#: src/pages/sobre/_components/BioCard/BioCard.tsx:8
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:15
 msgid "Sobre Mim"
 msgstr "Sobre Mí"
 
-#: src/pages/sobre/_components/BioCard/BioCard.tsx:12
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:23
 msgid "Sou desenvolvedor front-end formado em Sistemas para Internet pela <0>FACCAT</0>. Ao longo da minha trajetória, especializei-me na construção de aplicações web eficientes e escaláveis, tendo o <1>React</1> como minha principal tecnologia de atuação. Além do ecossistema JavaScript, possuo experiência prática no desenvolvimento e manutenção de plataformas utilizando <2>PHP</2> e <3>WordPress</3>, o que me proporciona versatilidade para me adaptar a diferentes requisitos técnicos e necessidades de arquitetura."
 msgstr "Soy desarrollador front-end graduado en Sistemas para Internet por la <0>FACCAT</0>. A lo largo de mi trayectoria, me he especializado en la construcción de aplicaciones web eficientes y escalables, teniendo a <1>React</1> como mi principal tecnología de actuación. Además del ecosistema JavaScript, tengo experiencia práctica en el desarrollo y mantenimiento de plataformas utilizando <2>PHP</2> y <3>WordPress</3>, lo que me proporciona versatilidad para adaptarme a diferentes requisitos técnicos y necesidades de arquitectura."
 
@@ -151,3 +163,15 @@ msgstr "Técnico en Informática"
 #: src/constants/education.ts:5
 msgid "Técnologo em Sistemas para Internet"
 msgstr "Tecnólogo en Sistemas para Internet"
+
+#: src/constants/projects.ts:6
+msgid "Uma Pokédex interativa consumindo a PokeAPI para listar e exibir detalhes dos Pokémon."
+msgstr "Una Pokédex interactiva que consume la PokeAPI para enumerar y mostrar detalles de los Pokémon."
+
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:77
+msgid "Ver mais"
+msgstr "Ver más"
+
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:77
+msgid "Ver menos"
+msgstr "Ver menos"

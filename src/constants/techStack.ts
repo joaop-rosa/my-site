@@ -11,4 +11,6 @@ export const TECH_STACK = [
 	"CSS",
 	"JavaScript",
 	"Wordpress",
+	"React Native",
+	"Expo",
 ];

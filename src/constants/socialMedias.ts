@@ -7,6 +7,6 @@ export const SOCIAL_MEDIAS = [
 	{
 		name: "Linkedin",
 		icon: "/icons/linkedin.svg",
-		url: "https://www.linkedin.com/in/jo%C3%A3o-paulo-rosa-400b50168/",
+		url: "https://www.linkedin.com/in/joao-p-rosa/",
 	},
 ];

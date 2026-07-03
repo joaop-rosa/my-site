@@ -43,14 +43,59 @@
 	color: var(--amber-hex);
 }
 
-.socialMediasWrapper {
+.actionsWrapper {
 	display: flex;
-	gap: 16px;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 24px;
 	margin-top: 24px;
 }
 
+.socialMediasWrapper {
+	display: flex;
+	gap: 16px;
+}
+
+.downloadBtn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	background-color: var(--black);
+	border: 1px solid var(--white-10);
+	color: var(--zinc-light);
+	font-size: 14px;
+	font-weight: 600;
+	height: 45px;
+	padding: 0 20px;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.downloadBtn:hover {
+	background-color: var(--amber-hex);
+	border-color: var(--amber-hex);
+	color: var(--white);
+	transform: scale(1.03);
+	box-shadow: 0 4px 12px var(--amber-30);
+}
+
+.downloadIcon {
+	width: 18px;
+	height: 18px;
+	opacity: 0.7;
+	transition: opacity 0.3s ease;
+}
+
+.downloadBtn:hover .downloadIcon {
+	opacity: 1;
+}
+
 .socialMedia {
-	background-color: black;
+	background-color: var(--black);
 	border-radius: 50px;
 	position: relative;
 	padding: 10px;
