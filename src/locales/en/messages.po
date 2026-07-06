@@ -21,6 +21,10 @@ msgstr "← BACK TO HOME"
 msgid "Atualmente"
 msgstr "Currently"
 
+#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:89
+msgid "Baixar CV"
+msgstr "Download CV"
+
 #: src/pages/sobre/_components/EducationCard/EducationCard.tsx:18
 msgid "Certificados & Formações"
 msgstr "Certificates & Education"
@@ -50,7 +54,7 @@ msgstr "Front-end Developer"
 msgid "Estágio Desenvolvedor Front‑end"
 msgstr "Front-end Developer Intern"
 
-#: src/constants/projects.ts:24
+#: src/constants/projects.ts:20
 msgid "Este site :)"
 msgstr "This site :)"
 
@@ -82,24 +86,28 @@ msgstr "Icon"
 msgid "Icone da empresa"
 msgstr "Company icon"
 
+#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:86
+msgid "Ícone de download"
+msgstr "Download icon"
+
 #. placeholder {0}: socialMedia.name
-#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:67
+#: src/pages/_components/WelcomeCard/WelcomeCard.tsx:68
 msgid "Ícone do {0}"
 msgstr "Icon of {0}"
 
-#: src/constants/projects.ts:18
+#: src/constants/projects.ts:14
 msgid "Landing page institucional para escritório de advocacia com foco em conversão."
 msgstr "Institutional landing page for a law firm focused on conversion."
 
-#: src/constants/projects.ts:25
+#: src/constants/projects.ts:21
 msgid "Meu portfólio pessoal construído com design Bento Box e foco em UX/UI."
 msgstr "My personal portfolio built with Bento Box design and focus on UX/UI."
 
-#: src/pages/sobre/_components/BioCard/BioCard.tsx:44
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:55
 msgid "Minha principal motivação profissional é traduzir regras de negócios complexas em interfaces <0>funcionais, acessíveis e de alto desempenho</0>. Busco o aprimoramento contínuo através do estudo de novas tecnologias e da aplicação das melhores práticas de engenharia de software. Meu objetivo é sempre entregar soluções robustas que gerem <1>valor real</1> para o cliente e garantam a melhor experiência possível para o usuário final."
 msgstr "My main professional motivation is to translate complex business rules into <0>functional, accessible, and high-performance</0> interfaces. I seek continuous improvement through the study of new technologies and the application of best software engineering practices. My goal is always to deliver robust solutions that generate <1>real value</1> for the client and ensure the best possible experience for the end user."
 
-#: src/pages/sobre/_components/BioCard/BioCard.tsx:27
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:38
 msgid "Nos últimos quatro anos, atuo na <0>CWI Software</0>, alocado de forma contínua em projetos para a <1>Coca-Cola</1>. Durante esse período, fui responsável por desenvolver uma ampla variedade de sistemas de alta visibilidade e impacto. Meu histórico inclui a entrega de soluções tecnológicas para grandes eventos, como <2>Rock in Rio</2> e <3>The Town</3>, além da criação de sites institucionais, da plataforma de gestão das <4>Caravanas de Natal</4> e de sistemas corporativos estratégicos utilizados pelas operações da Coca-Cola LATAM."
 msgstr "Over the past four years, I have been working at <0>CWI Software</0>, continuously allocated to projects for <1>Coca-Cola</1>. During this time, I have been responsible for developing a wide range of highly visible and impactful systems. My track record includes delivering technological solutions for major events, such as <2>Rock in Rio</2> and <3>The Town</3>, as well as creating institutional sites, the management platform for the <4>Christmas Caravans</4>, and strategic corporate systems used by Coca-Cola LATAM operations."
 
@@ -111,6 +119,10 @@ msgstr "Hi, I am"
 msgid "Olá! Sou João Paulo, um entusiasta da tecnologia e atualmente um desenvolvedor front-end em constante evolução. Atualmente, estou aprimorando minhas habilidades e conhecimentos na área, enquanto curso Tecnólogo em Sistemas para Internet na FACCAT."
 msgstr "Hello! I am João Paulo, a technology enthusiast and currently a constantly evolving front-end developer. Currently, I am improving my skills and knowledge in the area, while studying Internet Systems Technology at FACCAT."
 
+#: src/constants/projects.ts:5
+msgid "Pokedex"
+msgstr "Pokedex"
+
 #: src/constants/text.ts:9
 msgid "Projetos"
 msgstr "Projects"
@@ -119,7 +131,7 @@ msgstr "Projects"
 msgid "Seta"
 msgstr "Arrow"
 
-#: src/constants/projects.ts:17
+#: src/constants/projects.ts:13
 msgid "Site jurídico"
 msgstr "Law firm site"
 
@@ -128,11 +140,11 @@ msgstr "Law firm site"
 msgid "Sobre mim"
 msgstr "About me"
 
-#: src/pages/sobre/_components/BioCard/BioCard.tsx:8
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:15
 msgid "Sobre Mim"
 msgstr "About Me"
 
-#: src/pages/sobre/_components/BioCard/BioCard.tsx:12
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:23
 msgid "Sou desenvolvedor front-end formado em Sistemas para Internet pela <0>FACCAT</0>. Ao longo da minha trajetória, especializei-me na construção de aplicações web eficientes e escaláveis, tendo o <1>React</1> como minha principal tecnologia de atuação. Além do ecossistema JavaScript, possuo experiência prática no desenvolvimento e manutenção de plataformas utilizando <2>PHP</2> e <3>WordPress</3>, o que me proporciona versatilidade para me adaptar a diferentes requisitos técnicos e necessidades de arquitetura."
 msgstr "I am a front-end developer with a degree in Internet Systems from <0>FACCAT</0>. Throughout my career, I have specialized in building efficient and scalable web applications, with <1>React</1> as my main technology. Besides the JavaScript ecosystem, I have practical experience in developing and maintaining platforms using <2>PHP</2> and <3>WordPress</3>, which gives me versatility to adapt to different technical requirements and architectural needs."
 
@@ -151,3 +163,15 @@ msgstr "IT Technician"
 #: src/constants/education.ts:5
 msgid "Técnologo em Sistemas para Internet"
 msgstr "Internet Systems Technology"
+
+#: src/constants/projects.ts:6
+msgid "Uma Pokédex interativa consumindo a PokeAPI para listar e exibir detalhes dos Pokémon."
+msgstr "An interactive Pokédex consuming PokeAPI to list and display Pokémon details."
+
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:77
+msgid "Ver mais"
+msgstr "See more"
+
+#: src/pages/sobre/_components/BioCard/BioCard.tsx:77
+msgid "Ver menos"
+msgstr "See less"
