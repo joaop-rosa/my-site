@@ -17,3 +17,6 @@ playground-temp
 temp
 TODOs.md
 .eslintcache
+
+# translations compiled catalogs
+src/locales/**/*.js
